@@ -1,7 +1,7 @@
 ---
 description: >-
-  How we'll keep our accounts & infrastructure & your quiet life and assets
-  secured(on non chain level)
+  Как мы обеспечим безопасность наших учетных записей и инфраструктуры, а также
+  вашей спокойной жизни и активов (не на уровне сети)
 cover: >-
   ../.gitbook/assets/asus-rog-republic-of-gamers-cyberpunk-asus-zephyrus-wallpaper-2400x1350_50.jpg
 coverY: 400
