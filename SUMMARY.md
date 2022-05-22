@@ -1,7 +1,7 @@
 # Table of contents
 
 * [👁🗨 MasteringKlyntar](README.md)
-  * [📃 The MIT License](readme/license.md)
+  * [📃 Лицензия MIT](readme/license.md)
 
 ## 🛰 Beginning
 
