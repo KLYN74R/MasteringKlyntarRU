@@ -1,5 +1,5 @@
 ---
-description: The encyclopedia of KLYNTAR digital ecosystem
+description: Энциклопедия экосистемы KLYNTAR
 cover: .gitbook/assets/MOSHED-2022-1-1-22-31-2.gif
 coverY: 0
 ---
@@ -8,16 +8,14 @@ coverY: 0
 
 ![](.gitbook/assets/MOSHED-2022-1-1-22-31-2.gif)
 
-## What this docs & book about?
+## О чём эта книга?
 
-It's a collection of useful explainations of code snippets,patterns,mechanisms of KLYNTAR core. Get the deep understanding of how it works,how to use it to build everything you want and make this world better. It's kind of ELI5 to allow you to step by step understand all potential features,abilities of Klyntar. Note that we're updating this book permanently by adding new cool stuff. Go through the basics to detailed explanations. However,as CTO & CEO I hope that this book will be useful as for newbies as for expreienced developers who will be work together with us in our common great mission.
+Это сборник полезных объяснений фрагментов кода, паттернов, механизмов ядра KLYNTAR. Получите глубокое понимание того, как это работает, как использовать его, чтобы построить все, что вы хотите, и сделать этот мир лучше. Это своего рода ELI5, чтобы вы могли шаг за шагом понять все потенциальные возможности, способности KLYNTAR. Обратите внимание, что мы постоянно обновляем эту книгу, добавляя новые интересные материалы. Пройдите от основ к подробным объяснениям. Как технический и генеральный директор, я надеюсь, что эта книга будет полезна как новичкам, так и опытным разработчикам, которые будут работать вместе с нами в нашей общей великой миссии.
 
 {% hint style="info" %}
-<mark style="color:red;">Note</mark> that this book is not our single source of knowledges. [<mark style="color:red;">Follow</mark>](beginning/socialnye-seti-and-ssylki.md) us on different
-
-platforms to find out more!
+<mark style="color:red;">Обратите внимание</mark> что эта книга не является единственным источником информации. [<mark style="color:red;">Следите за нами</mark>](beginning/socialnye-seti-and-ssylki.md) на других платформах чтоб получать больше информации
 {% endhint %}
 
 {% hint style="warning" %}
-It's still non release version
+Это не релизная версия
 {% endhint %}
