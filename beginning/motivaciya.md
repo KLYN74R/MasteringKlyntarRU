@@ -1,14 +1,14 @@
 ---
-description: Why we've decided to create Klyntar
+description: Почему мы решили создать KLYNTAR
 cover: ../.gitbook/assets/7750c6e98043f76fca0a058711397aac.jpg
 coverY: 378.03108808290153
 ---
 
-# 🎯 Motivation
+# 🎯 Мотивация
 
-![Become the part of better world!](../.gitbook/assets/KLY\_LOGO.png)
+![Станьте частью лучшего мира!](../.gitbook/assets/KLY\_LOGO.png)
 
-Since early ages I'm in love with crypto industry. Among tons of hustlers who are here only because of money & gambling, I(and our <mark style="color:purple;"></mark> [_<mark style="color:purple;">**@KlyntarTeam**</mark>_](https://github.com/klyntarteam)) really appreciate impact of valuable projects which brings improvements to our world. Instead of being 26899_th_ scam NFT or 5684_th we want to be useful by creating our project. We've started Klyntar with_ [_<mark style="color:purple;">**@ushkoff**</mark>_](https://github.com/ushkoff) at 16 as NewNews, but during development process everyone has been proposing a lot of improvements, so very soon we've decided to replan our initial intentions and create more general propose project.\
+С ранних лет я влюблен в криптоиндустрию. Среди множества дельцов, которые здесь только из-за денег и быстрой выгоды из говнотокенов, я (и наша [_<mark style="color:purple;">**@KlyntarTeam**</mark>_](https://github.com/KlyntarTeam)) действительно ценю влияние проектов, которые вносят улучшения в наш мир. Вместо того, чтобы быть 26899-ым скамом или 5684-ым NFT проектом, мы хотим быть полезными, создавая наш продукт. Мы начали строительство Klyntar с [_<mark style="color:purple;">**@ushkoff**</mark>_](https://github.com/ushkoff) в 16 лет как NewNews, но в процессе разработки все предлагали множество улучшений, поэтому очень скоро мы решили перепланировать наши первоначальные намерения и создать более глобальный проект.\
 \
 At the beginning of our initial whitepaper, you can see some kind of disclaimer\
 \
