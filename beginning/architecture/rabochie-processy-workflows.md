@@ -1,7 +1,7 @@
 ---
-cover: ../../.gitbook/assets/DeterminedEssentialHoki-size_restricted.gif
+cover: ../../.gitbook/assets/951080b614db5517e5d24e55c46dca05.gif
 coverY: 0
 ---
 
-# 📄 Workflows
+# 📄 Рабочие процессы(workflows)
 
