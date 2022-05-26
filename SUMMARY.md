@@ -67,5 +67,6 @@
 * [📈 CIIPs(предложения по улучшению индустрии)](beginning/ciips-predlozheniya-po-uluchsheniyu-industrii.md)
 * [💱 Информация для бирж/обменников и тд](beginning/informaciya-dlya-birzh-obmennikov-i-td.md)
 * [⚛ Квантовые заметки & мысли](beginning/kvantovye-zametki-and-mysli.md)
+* [🍕 Контрибуторам](beginning/kontributoram.md)
 * [👮 Базовая безопасность](beginning/bazovaya-bezopasnost.md)
 * [🇸🇴 Социальные сети & Ссылки](beginning/socialnye-seti-and-ssylki.md)

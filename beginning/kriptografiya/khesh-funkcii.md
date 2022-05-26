@@ -20,3 +20,5 @@ BLAKE3 was choosen as main candidate to be used as lead hash function for gettin
 Insofar as BLAKE3 supports XOF mode e.g. output length of hash might be variable(like in SHAKE hashing scheme). This is important in case of using them as quantum secure alternative to 128 or 256 bits schemes which can be abused by Grover or BHT algorithms in case of collision found what will be dangerous to cross-symbiotes quantum swaps(read more at [kvantovye-zametki-and-mysli.md](../kvantovye-zametki-and-mysli.md "mention")).
 
 BLAKE3 will be used on kNULL chain by [<mark style="color:red;">dev@controller</mark>](../architecture/rabochie-processy-workflows.md) workflow. However, thanksfully to [<mark style="color:red;">Mutation mechanisms</mark>](../mutacii.md) <mark style="color:red;"></mark> developers of other workflows,operators of nodes in other symbiotes will have ability to use any function they want which will be presented in official repository or developed/distributed by 3rd parties via alternative channels.
+
+### Концепция Ripped hashes
