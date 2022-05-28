@@ -70,5 +70,43 @@ coverY: 468.55958549222805
 
 Здесь вы узнаете о том, как правильно использовать репозиторий с лучшими практиками при построении собственной инфраструктуры, настройке плагинов, их комбинации и так далее
 
+### <mark style="color:red;"></mark>[<mark style="color:red;">Other projects</mark>](drugie-zamechatelnye-proekty-skoro.md)<mark style="color:red;"></mark>
 
+Узнайте больше о других будущих проектах
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">Pseudo ICO</mark>](psevdo-ico.md)<mark style="color:red;"></mark>
+
+Узнайте больше о том как мы решили провести первичную раздачу. Нет, это не просто пресейл в несколько етапов. Мы гарантируем реальное децентрализованное распределение при участии других цепочек, майнеров Bitcoin & Ethereum, стейкеров разных проектов и так далее. Рекомендуется к прочтению хотя бы для общего ознакомления
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">Releases</mark>](relizy/)<mark style="color:red;"></mark>
+
+В рамках roadmap'а разумеется планируется проведение важных обновлений. Мы решили дать немного информации про ближайшие из них. Каждый из релизов представляет важную веху в развитии возможностей Klyntar и остальных цепей
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">CIIPs(Crypto industry improvements proposals)</mark>](obshii-vzglyad.md#ciips-crypto-industry-improvements-proposals)<mark style="color:red;"></mark>
+
+Klyntar-это тотальнейший open source и история про "controlled by community". Уже как минимум из описаний предыдущий глав можно сделать вывод как мы заботимся о том, чтоб сообщество было максимально вовлечено в процесс разработки и улучшения Klyntar. При этом, страна должна знать своих героев, а значит вклад каждого должен быть оценён. Читайте об этом детальней  в этой главе
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">Informations for exchanges</mark>](informaciya-dlya-birzh-obmennikov-i-td.md)<mark style="color:red;"></mark>
+
+В этом разделе биржи и другие крупные провайдеры могут получить всю необходимую информацию касательно настройки своих инфраструктур
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">Quantum stuff</mark>](kvantovye-zametki-and-mysli.md)<mark style="color:red;"></mark>
+
+Одно из моих хобби и тем увлечений - удивительный мир квантовой механики. В этом разделе команда поделится своими мыслями касательно эры квантовых комп'ютеров и роли криптовалют в них
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">Info for contributors</mark>](kontributoram.md)<mark style="color:red;"></mark>
+
+Небольшие указания и информация для тех кто собирается стать контрибутором Klyntar
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">Basic security</mark>](bazovaya-bezopasnost.md)<mark style="color:red;"></mark>
+
+Безопасность сети-это одно дело, совсем другое-когда атаки происходят по другим каналам. В лучшем случае-безопасники узнают о оплошности и оперативно исправляют, в худшем-на страничках в соцсетях появляется пост о <mark style="color:purple;">ТОПОВОМ ДРОПЕ ТАК ЧТО ПРИСЫЛАЙТЕ МНЕ МОНЕТЫ,А Я ВАМ x2 В ОТВЕТ</mark>. Вроде и смешно мол "кто те лохи кто ведётся", да вот только аккаунты/сайты даже крупных проектов поддаются атакам. Как пример вспоминаются последние [_<mark style="color:red;">атаки на аккаунты Bored Ape в Instagram</mark>_](https://www.theverge.com/2022/4/25/23041415/bored-ape-yacht-club-nft-hack-instagram) или например тот [_<mark style="color:red;">случай когда в аккаунтах Twitter Гейтса, Маска и других известных людей появилось такое</mark>_](https://www.nytimes.com/2020/07/15/technology/twitter-hack-bill-gates-elon-musk.html)_<mark style="color:red;"></mark>_
+
+![Смешно конечно, но не тем кто реально отправлял что-то ](<../.gitbook/assets/image (2).png>)
+
+Поскольку нам такого не надо, рекомендуем ознакомится с данной главой для понимания того, как KlyntarTeam будет бороться с подобным. В конце-концов, не на тех нападать собрались)
+
+### <mark style="color:red;"></mark>[<mark style="color:red;">Social media</mark>](socialnye-seti-and-ssylki.md)<mark style="color:red;"></mark>
+
+Our links for social media & other materials & footer references&#x20;
 
