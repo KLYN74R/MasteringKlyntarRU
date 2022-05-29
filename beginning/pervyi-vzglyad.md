@@ -92,7 +92,7 @@ coverY: 468.55958549222805
 
 Klyntar-это тотальнейший open source и история про "controlled by community". Уже как минимум из описаний предыдущий глав можно сделать вывод как мы заботимся о том, чтоб сообщество было максимально вовлечено в процесс разработки и улучшения Klyntar. При этом, страна должна знать своих героев, а значит вклад каждого должен быть оценён. Читайте об этом детальней  в этой главе
 
-### <mark style="color:red;"></mark>[<mark style="color:red;">Informations for exchanges</mark>](informaciya-dlya-birzh-obmennikov-i-td.md)<mark style="color:red;"></mark>
+### <mark style="color:red;"></mark>[<mark style="color:red;">Information for exchanges</mark>](informaciya-dlya-birzh-obmennikov-i-td.md)<mark style="color:red;"></mark>
 
 В этом разделе биржи и другие крупные провайдеры могут получить всю необходимую информацию касательно настройки своих инфраструктур
 
