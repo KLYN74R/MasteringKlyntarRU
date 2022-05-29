@@ -6,7 +6,7 @@
 ## 🛰 Beginning
 
 * [🎯 Мотивация](beginning/motivaciya.md)
-* [👁 Общий взгляд](beginning/obshii-vzglyad.md)
+* [👁 Первый взгляд](beginning/pervyi-vzglyad.md)
 * [🧠 Горе от ума](beginning/gore-ot-uma.md)
 * [🔑 Криптография](beginning/kriptografiya/README.md)
   * [🛡 Симметричное шифрование](beginning/kriptografiya/simmetrichnoe-shifrovanie.md)
