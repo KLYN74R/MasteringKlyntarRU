@@ -65,6 +65,7 @@
   * [🌪 Ragnarök](beginning/relizy/ragnaroek.md)
   * [🌐 Web23](beginning/relizy/web23.md)
 * [📈 CIIPs(предложения по улучшению индустрии)](beginning/ciips-predlozheniya-po-uluchsheniyu-industrii.md)
+* [🚀 Запуск и настройка инфраструктуры](beginning/zapusk-i-nastroika-infrastruktury.md)
 * [💱 Информация для бирж/обменников и тд](beginning/informaciya-dlya-birzh-obmennikov-i-td.md)
 * [⚛ Квантовые заметки & мысли](beginning/kvantovye-zametki-and-mysli.md)
 * [🍕 Контрибуторам](beginning/kontributoram.md)
