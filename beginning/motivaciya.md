@@ -10,15 +10,15 @@ coverY: 378.03108808290153
 
 С ранних лет я влюблен в криптоиндустрию. Среди множества дельцов, которые здесь только из-за денег и быстрой выгоды из говнотокенов, я (и наша [_<mark style="color:purple;">**@KlyntarTeam**</mark>_](https://github.com/KlyntarTeam)) действительно ценю влияние проектов, которые вносят улучшения в наш мир. Вместо того, чтобы быть 26899-ым скамом или 5684-ым NFT проектом, мы хотим быть полезными, создавая наш продукт. Мы начали строительство Klyntar с [_<mark style="color:purple;">**@ushkoff**</mark>_](https://github.com/ushkoff) в 16 лет как NewNews, но в процессе разработки все предлагали множество улучшений, поэтому очень скоро мы решили перепланировать наши первоначальные намерения и создать более глобальный проект.\
 \
-At the beginning of our initial whitepaper, you can see some kind of disclaimer\
+В начале нашего white paper вы могли видеть подобный дисклеймер\
 \
-_<mark style="color:purple;">«...No, it’s not another DeFi shit token,10th generation of Doge clones, «amazing» cross-chain bridge or some scam NFT project»</mark>_\
+_<mark style="color:purple;">«...Нет, это не очередной дерьмовый DeFi токен, 10-е поколение клонов Doge, «потрясающий» кроссчейн-бридж или какой-то мошеннический проект NFT»</mark>_\
 \
-Lack of really technically original projects last years also was a motivation for us to work and present an MVP version of future Goliath. Our goals isn't to sell 10B of premined coins to morons and be 10000th project on CoinMarketCap rates. Our goals is to refresh those spirit of geeks time, like on the edge of crypto projects when literally each month was the birthday of  interesting projects.\
+Отсутствие действительно технически оригинальных проектов в последние годы также послужило для нас мотивацией поработать и представить MVP-версию будущего голиафа. Наша цель не в том, чтобы продать дурачкам 10 миллиардов предварительно добытых монет и стать 10-тысячным проектом по курсу CoinMarketCap. Наша цель — освежить дух времени гиков в лучших традициях первых крипто проектов, когда буквально каждый месяц был днем рождения чего-то нового и интересного.\
 \
-In development process we have been using the newest and best available technologies,algorithms and architectural features.\
+В процессе разработки мы использовали новейшие и лучшие доступные технологии, алгоритмы и архитектурные особенности.\
 \
-Let's start our journey!\
+Начнём путешествие!\
 \
 \
 [_<mark style="color:purple;">**VladArtem**</mark>_](https://github.com/VladChernenko)_<mark style="color:purple;">****</mark>_
