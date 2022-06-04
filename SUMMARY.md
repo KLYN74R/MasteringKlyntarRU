@@ -13,6 +13,7 @@
   * [👽 Симбиоты](beginning/architecture/simbioty.md)
   * [👨👩👦 Хостчейны](beginning/architecture/khostcheiny.md)
   * [📄 Рабочие процессы(workflows)](beginning/architecture/rabochie-processy-workflows.md)
+  * [🏛 Социальный консенсус](beginning/arkhitektura/socialnyi-konsensus.md)
 * [🔑 Криптография](beginning/kriptografiya/README.md)
   * [🛡 Симметричное шифрование](beginning/kriptografiya/simmetrichnoe-shifrovanie.md)
   * [#⃣ Хэш функции](beginning/kriptografiya/khesh-funkcii.md)
