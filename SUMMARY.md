@@ -24,6 +24,7 @@
   * [😵 Гомоморфные схемы](beginning/kriptografiya/gomomorfnye-skhemy.md)
   * [🤔 Доказательства с нулевым разглашением](beginning/kriptografiya/dokazatelstva-s-nulevym-razglasheniem.md)
   * [🌀 Кольцевые подписи](beginning/kriptografiya/kolcevye-podpisi.md)
+  * [🕵 VRF](beginning/kriptografiya/vrf.md)
 * [🤖 Сервисы](beginning/servisy/README.md)
   * [🤩 Интро](beginning/servisy/intro.md)
   * [🏭 Архитектура](beginning/servisy/arkhitektura.md)
