@@ -13,10 +13,12 @@ coverY: 55.23975588491717
 
 ![](https://readme-typing-svg.herokuapp.com/?font=Major+Mono+Display\&size=48\&duration=4000\&color=C20000\&center=true\&vCenter=true\&width=300\&height=80\&lines=Apollo)
 
-### 📖 Content
+### 📖 Содержание
 
-* [<mark style="color:red;">Short intro</mark>](apollo.md#short-intro)<mark style="color:red;"></mark>
-* [<mark style="color:red;">How to build</mark>](apollo.md#how-to-build)<mark style="color:red;"></mark>
+&#x20;
+
+[<mark style="color:red;">How to build</mark>](apollo.md#how-to-build)<mark style="color:red;"></mark>
+
 * [<mark style="color:red;">Modularity</mark>](apollo.md#modularity)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Advice</mark>](apollo.md#advice)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Docs</mark>](apollo.md#docs)<mark style="color:red;"></mark>
@@ -292,8 +294,7 @@ Follow us to get the news & updates ASAP. Discuss, share ideas, advices, help ne
 
 Read the docs here to find out more
 
-\
 
 
-:ru: [![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://mastering.klyntar.org)\
-:ru: [![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://ru.mastering.klyntar.org)
+:flag\_gb:: [![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://mastering.klyntar.org)\
+:flag\_ru:: [![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://ru.mastering.klyntar.org)
