@@ -34,7 +34,7 @@
   * [✈ Планы и намерения](beginning/servisy/plany-i-namereniya.md)
   * [🔎 Аудиты](beginning/servisy/audity.md)
 * [🧬 Мутации](beginning/mutacii.md)
-* [👾 Antivenom(тестнет)](beginning/antivenom-testnet/README.md)
+* [👾 AntiVenom(тестнет)](beginning/antivenom-testnet/README.md)
   * [✴ Интро](beginning/antivenom-testnet/intro.md)
   * [2 Альтернативы](beginning/antivenom-testnet/alternativy.md)
 * [🧑💻 Разбор кода](beginning/razbor-koda/README.md)
