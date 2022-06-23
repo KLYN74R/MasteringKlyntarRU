@@ -17,13 +17,14 @@ coverY: 55.23975588491717
 
 ### 📖 Содержание
 
-* <mark style="color:red;">Благодарность</mark>
-* <mark style="color:red;">Введение</mark>
-* <mark style="color:red;">Как сбилдить & запустить</mark>
-* <mark style="color:red;">Модульность</mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Благодарность</mark>](apollo.md#blagodarnost)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Введение</mark>](apollo.md#vvedenie)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Как сбилдить & запустить</mark>](apollo.md#kak-sbildit-and-zapustit)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Модульность</mark>](apollo.md#modularity)<mark style="color:red;"></mark>
 * <mark style="color:red;">Как активировать новые модули</mark>
 * <mark style="color:red;">Как написать собственный модуль</mark>
-* <mark style="color:red;">Совет</mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Совет</mark>](apollo.md#advice)<mark style="color:red;"></mark>
+* <mark style="color:red;">Документация</mark>
 
 
 
@@ -52,6 +53,8 @@ coverY: 55.23975588491717
 ### 🏗️ <mark style="color:red;">Как сбилдить & запустить</mark>
 
 Лучше 1 раз показать чем 100 сказать. С таким настроем переходим к запуску. Как вы наверняка уже прочитали ранее, KLYNTAR находится в симбиотических отношениях с другими блокчейнами-как уже существующими типа Bitcoin, Avalanche, XRP, Solana так и теми которые только будут изобретены в будущем.
+
+### Запуск вместе с Docker
 
 Запуская различные узлы других проектов, работая с необходимыми им инструментами, самой ужасной и раздражающей проблемой была проблема с начальной настройкой - неправильные конфигурации, старые документы или плохая документация от разработчиков, ошибки версионирования, nightly версии и так далее. Вот почему мы подготовили Docker образы, чтобы вы могли быть уверены, что у вас будет 100% успешная установка. Итак, приступим 🚀
 
@@ -112,7 +115,7 @@ docker run -dtp 9691:9691 --name test_kly klyntar/all_in_one@sha256:dff001a9cd3d
 
 #### Осталось чуть-чуть
 
-Зайдите в контейнер и перейдите в корневую директорию
+Зайдите в контейнер и перейдите в домашнюю директорию
 
 ```shell
 docker exec -ti test_kly bash
@@ -150,7 +153,7 @@ pnpm run build
 
 Теперь попробуйте запустить. В консоли вы должны увидеть такое
 
-![](https://user-images.githubusercontent.com/53381472/174460136-49cbf58b-fe08-4952-81b2-3b6e13d96444.jpg)
+![Попытайтесь найти "космическую пасхалку"🌠](https://user-images.githubusercontent.com/53381472/174460136-49cbf58b-fe08-4952-81b2-3b6e13d96444.jpg)
 
 ### Установка на "голое железо"
 
@@ -170,7 +173,7 @@ apt-get update -y && apt-get upgrade -y
 apt-get install nano sudo git curl wget build-essential libreadline-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev -y
 ```
 
-_****_[_<mark style="color:red;">**Тут**</mark>_](https://github.com/KLYN74R/KlyntarBaseImages/blob/263c335d1539b31cee280f5dae6d051d3a7aef0c/Basic/setup.sh#L20) установка Python v3.10. Python нужен для сборки аддонов на Go для их использования в Node.js
+_****_[_<mark style="color:red;">**Тут**</mark>_](https://github.com/KLYN74R/KlyntarBaseImages/blob/263c335d1539b31cee280f5dae6d051d3a7aef0c/Basic/setup.sh#L20) установка <mark style="color:purple;">Python v3.10</mark>. Python нужен для сборки аддонов на Go для их использования в Node.js
 
 ```bash
 #Fetch
@@ -206,7 +209,33 @@ apt update
 apt install -y nodejs
 ```
 
+Поскольку мы с вами более продвинутые ребята, то установим ещё кое-что, более продвинутую версию <mark style="color:red;">npm</mark> - [_<mark style="color:purple;">**pnpm**</mark>_](https://pnpm.io/) _<mark style="color:purple;">****</mark>_ и _<mark style="color:purple;">****</mark>_ [_<mark style="color:purple;">**node-gyp**</mark>_](https://github.com/nodejs/node-gyp) _<mark style="color:purple;">****</mark>_ для билда аддонов.
 
+```bash
+npm install pnpm -g
+#And node-gyp to build Golang addons(Go => C => .node addons)
+npm install node-gyp -g
+```
+
+Последним необходимо установить Go
+
+```bash
+#Fetch archive
+wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
+
+#Unpack
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
+
+
+#Add vars to PATH
+echo 'export GO111MODULE="auto"' >> ~/.bashrc
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
+
+source ~/.bashrc
+
+#Don't need archive anymore
+rm go1.18.linux-amd64.tar.gz
+```
 
 ### ⚙️ Modularity
 
@@ -335,10 +364,7 @@ http(s)://<your_interface>:<port>/symbiotes
 \
 
 
-### 🤓 Advice
-
-\
-
+### 🤓 Совет
 
 Follow us to get the news & updates ASAP. Discuss, share ideas, advices, help newbies to make our community more powerful.We're happy to involve new members to KLY community 😊
 
@@ -352,7 +378,7 @@ Follow us to get the news & updates ASAP. Discuss, share ideas, advices, help ne
 \
 
 
-### 📚Docs
+### 📚Документация
 
 Read the docs here to find out more
 
