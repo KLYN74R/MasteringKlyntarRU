@@ -20,13 +20,12 @@ coverY: 55.23975588491717
 * <mark style="color:red;"></mark>[<mark style="color:red;">Благодарность</mark>](apollo.md#blagodarnost)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Введение</mark>](apollo.md#vvedenie)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Как сбилдить & запустить</mark>](apollo.md#kak-sbildit-and-zapustit)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Модульность</mark>](apollo.md#modularity)<mark style="color:red;"></mark>
-* <mark style="color:red;">Как активировать новые модули</mark>
-* <mark style="color:red;">Как написать собственный модуль</mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Совет</mark>](apollo.md#advice)<mark style="color:red;"></mark>
-* <mark style="color:red;">Документация</mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Модульность</mark>](apollo.md#modulnost)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Как активировать новые модули</mark>](apollo.md#kak-aktivirovat-novye-moduli)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Как написать собственный модуль</mark>](apollo.md#kak-napisat-sobstvennyi-modul)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">Совет</mark>](apollo.md#sovet)<mark style="color:red;"></mark>
 
-
+<mark style="color:red;"></mark>
 
 ### 👨‍🚀 <mark style="color:red;">Благодарность</mark>
 
@@ -237,7 +236,9 @@ source ~/.bashrc
 rm go1.18.linux-amd64.tar.gz
 ```
 
-### ⚙️ Modularity
+###
+
+### ⚙️ <mark style="color:red;">Модульность</mark>
 
 Working with different "hacking" tools,I've get the experience of so called 'best practises' of how to build real powerful tool. That's why, Apollo(as KLYNTAR) will be very modular. Just now,you have three ways to improve Apollo behaviour by loading modules to KLY\_Modules, KLY\_ServicesAPI and KLY\_WorkflowsAPI
 
@@ -360,13 +361,15 @@ The same principle as for services API. Each subdirectory - it's a repository in
 http(s)://<your_interface>:<port>/symbiotes
 ```
 
-\
-\
 
 
-### 🤓 Совет
+### 🧐 <mark style="color:red;">Как активировать новые модули</mark>
 
-Follow us to get the news & updates ASAP. Discuss, share ideas, advices, help newbies to make our community more powerful.We're happy to involve new members to KLY community 😊
+### 🐱‍💻 <mark style="color:red;">Как написать собственный модуль</mark> 
+
+### 🤓 <mark style="color:red;">Совет</mark>
+
+Следите за нами, чтобы получать новости и обновления как можно скорее. Обсуждайте, делитесь идеями, советами, помогайте новичкам сделать наше сообщество сильнее. Мы рады привлечь новых участников в сообщество KLY 😊
 
 \
 [![](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge\&logo=reddit\&logoColor=white) ](https://www.reddit.com/r/KLYN74R/)[![](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge\&logo=twitter\&logoColor=white) ](https://twitter.com/KLYN74R)[![](https://img.shields.io/badge/Medium-12100E?style=for-the-badge\&logo=medium\&logoColor=white) ](https://klyntar.medium.com/)[![](https://img.shields.io/badge/TikTok-000000?style=for-the-badge\&logo=tiktok\&logoColor=white)](https://www.tiktok.com/@klyn74r)\
@@ -374,15 +377,3 @@ Follow us to get the news & updates ASAP. Discuss, share ideas, advices, help ne
 [![](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge\&logo=telegram\&logoColor=white) ](https://t.me/KLYN74R)[![](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge\&logo=discord\&logoColor=white) ](https://discord.gg/f7e7fCp97r)[![](https://img.shields.io/badge/Tor%20site-330F63?style=for-the-badge\&logoColor=white) ](http://klyntar66kjwhyirucco6sjgyp2f7lfznelzgpjcp6oha2olzb4rlead.onion)[![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge\&logo=youtube\&logoColor=white)](https://www.youtube.com/channel/UC3TiyK40an6rQlf3BarMDoQ)\
 [![](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge\&logo=facebook\&logoColor=white) ](https://www.facebook.com/KLYN74R/)[![](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge\&logo=gitlab\&logoColor=white) ](https://gitlab.com/KLYNTAR)[![](https://img.shields.io/badge/Tumblr-%2336465D.svg?\&style=for-the-badge\&logo=Tumblr\&logoColor=white) ](https://klyn74r.tumblr.com/)[![](https://img.shields.io/badge/Stack\_Overflow-FE7A16?style=for-the-badge\&logo=stack-overflow\&logoColor=white)](broken-reference)
 
-\
-\
-
-
-### 📚Документация
-
-Read the docs here to find out more
-
-
-
-:flag\_gb:: [![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://mastering.klyntar.org)\
-:flag\_ru:: [![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://ru.mastering.klyntar.org)
