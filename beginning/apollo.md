@@ -110,19 +110,19 @@ docker pull klyntar/all_in_one@sha256:dff001a9cd3da6328c504b52ed8a5748c47d23219f
 docker run -dtp 9691:9691 --name test_kly klyntar/all_in_one@sha256:dff001a9cd3da6328c504b52ed8a5748c47d23219feae220930dac1c1981cfe7
 ```
 
-#### **Final**
+#### Осталось чуть-чуть
 
-Go into container to root dir
+Зайдите в контейнер и перейдите в корневую директорию
 
 ```shell
 docker exec -ti test_kly bash
 
-# Inside container
+# Внутри контейнера
 
 cd ~
 ```
 
-Clone Apollo repository
+Склонируйте репозиторий Apollo
 
 ```shell
 git clone https://github.com/KLYN74R/Apollo.git
@@ -130,38 +130,45 @@ git clone https://github.com/KLYN74R/Apollo.git
 cd Apollo
 ```
 
-Finally,run the only one command
+Ну и в конце-концов запустите 1 команду для билда
 
 ```shell
 pnpm run build
 ```
 
-### **Now take a rest and see the building process. It may take some minutes,but you're free from self-install tons of libs,dependencies and walking among dirs**
-
-\
-
+### Теперь отдохните и посмотрите на процесс сборки. Это может занять несколько минут, но вы освобождены от самостоятельной установки множества библиотек, зависимостей и обхода по древу каталогов.
 
 ![](https://i.pinimg.com/originals/d0/63/09/d063096ba4e07795c1bdf98572cb79a8.gif)
 
-#### The signs that build was succesful are messages to console like this 
+Промежуточным сигналом про успешность первого этапа сборки будет такое вот в консоли
 
 ![](https://2131090630-files.gitbook.io/\~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FphIHWZY173DpNXBbDjVg%2Fuploads%2FdewG1SQftz0ndvmG4fNa%2Fimage.png?alt=media\&token=ad2710a7-0fd1-43cb-ad80-62e78badb989)
 
-#### ...and this
+...а после построения аддонов такое
 
 ![](https://2131090630-files.gitbook.io/\~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FphIHWZY173DpNXBbDjVg%2Fuploads%2FL3RavrjoA7nktQKFfV3i%2Fphoto\_2022-06-04\_11-55-04.jpg?alt=media\&token=6363785e-a243-4f98-80ca-5ee83b97da87)
 
-#### Now try to run. You should see the following
+Теперь попробуйте запустить. В консоли вы должны увидеть такое
 
 ![](https://user-images.githubusercontent.com/53381472/174460136-49cbf58b-fe08-4952-81b2-3b6e13d96444.jpg)
 
 ### Установка на "голое железо"
 
-Для представленного образа основным будет такой вот bash скрипт. Тут в целом шаг за шагом комментарии касательно того что вы устанавливаете:
+Для представленного образа основным будет такой вот bash скрипт. Тут в целом шаг за шагом комментарии касательно того что вы устанавливаете. При этом, если у вас на машине уже установлены подобные компоненты, то вы можете пропустить их установку и скачать только то что вам нужно:
 
 {% embed url="https://github.com/KLYN74R/KlyntarBaseImages/blob/main/Basic/setup.sh" %}
 
-#### Пример:
+Для начала традиционно
+
+```bash
+apt-get update -y && apt-get upgrade -y
+```
+
+Затем установите необходимые бинарники
+
+```bash
+apt-get install nano sudo git curl wget build-essential libreadline-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev -y
+```
 
 _****_[_<mark style="color:red;">**Тут**</mark>_](https://github.com/KLYN74R/KlyntarBaseImages/blob/263c335d1539b31cee280f5dae6d051d3a7aef0c/Basic/setup.sh#L20) установка Python v3.10. Python нужен для сборки аддонов на Go для их использования в Node.js
 
@@ -198,6 +205,8 @@ apt update
 #Install npm and node
 apt install -y nodejs
 ```
+
+
 
 ### ⚙️ Modularity
 
