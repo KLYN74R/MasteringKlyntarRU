@@ -387,9 +387,17 @@ polygon:0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027
                 "uniswap_kly":{
                 
                     "description":"Uniswap in KLY network",
-                    "rewards":"13.37% for Bitcoin blocks older than 500 000th"
-                    "stake":{
+                    "rewards":"13.37%"
+                    "unobtanium_stakes":{
+                        "btc":"inputs,blocks",
+                        "sol":"staking on NWr9GKgcBkP9nQkhS8mRKrK99iAXxBbkTCjQXJkwDK93",
+                        "matic":"ownership of ShitCoin1 and UselessToken2"
                     }
+                
+                },
+                
+                "some_useful_service":{
+                    ...
                 }
             
             ]
@@ -399,6 +407,28 @@ polygon:0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027
     },
     "polygon":{
     
+        "0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027":{
+        
+            "ShitCoin1":1000000,
+            "Tether":1337.111,
+            "ShitCoin3":13379999999999999999999
+        },
+        
+        "interesting_services":[
+            
+                "sol_algo_storage":{
+                
+                    "description":"Storage for Solana & Algorand smart contracts",
+                    "rewards":"9.76% | 79% | 11.11%"
+                    "unobtanium_stakes":{
+                        "btc":"blocks older than 600000",
+                        "near":">10000$ freeze on dac17f958d2ee523a2206206994597c13d831ec7.factory.bridge.near Tether(NEAR)",
+                        "algo":"ownership of 312769(Tether) or 31566704(USDC)"
+                    }
+                
+                }
+            
+            ]
     
     }
 
