@@ -236,16 +236,22 @@ source ~/.bashrc
 rm go1.18.linux-amd64.tar.gz
 ```
 
-###
+
 
 ### ⚙️ <mark style="color:red;">Модульность</mark>
 
-Working with different "hacking" tools,I've get the experience of so called 'best practises' of how to build real powerful tool. That's why, Apollo(as KLYNTAR) will be very modular. Just now,you have three ways to improve Apollo behaviour by loading modules to KLY\_Modules, KLY\_ServicesAPI and KLY\_WorkflowsAPI
+Работая с различными «хакерскими» инструментами, я получил опыт так называемых «лучших практик» для создания действительно мощных инструментов. Вот почему Apollo (как и KLYNTAR) будет динамически расширяем и модульным. Вы, мы, а так же миллионы других разработчиков смогут улучшать и дополнять возможности Apollo новыми командами в CLI, новыми разделами в UI, новыми паками для работы с симбиотами и сервисами на KLYNTAR.
 
-\
+Прямо сейчас у вас есть три способа улучшить поведение Apollo, загрузив расширения в
+
+* <mark style="color:purple;">KLY\_Modules</mark>
+* <mark style="color:purple;">KLY\_ServicesAPI</mark>
+* <mark style="color:purple;">KLY\_WorkflowsAPI</mark>
+
+И мы конечно же покажем вам как сделать это!\
 
 
-#### **KLY\_Modules**
+**KLY\_Modules**
 
 Directory for your external modules. This might be extra useful commands. Might be written by you or any other 3rd party. Must contain 2 directories **cli**(contains everything for commands in CLI) and **ui**(directory with everything for UI in browser). Soon we'll make a tutorial of HOWTO write modules for Apollo.
 
