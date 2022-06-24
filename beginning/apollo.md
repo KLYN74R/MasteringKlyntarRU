@@ -21,8 +21,8 @@ coverY: 55.23975588491717
 * <mark style="color:red;"></mark>[<mark style="color:red;">Введение</mark>](apollo.md#vvedenie)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Как сбилдить & запустить</mark>](apollo.md#kak-sbildit-and-zapustit)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Модульность</mark>](apollo.md#modulnost)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Как активировать новые модули</mark>](apollo.md#kak-aktivirovat-novye-moduli)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Как написать собственный модуль</mark>](apollo.md#kak-napisat-sobstvennyi-modul)<mark style="color:red;"></mark>
+* [<mark style="color:red;">Как активировать новые модули</mark>](apollo.md#kak-aktivirovat-novye-moduli)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Совет</mark>](apollo.md#sovet)<mark style="color:red;"></mark>
 
 <mark style="color:red;"></mark>
@@ -170,7 +170,7 @@ apollo ui
 В данном случае я использую Debian
 {% endhint %}
 
-Для представленного образа основным будет такой вот bash скрипт. Тут в целом шаг за шагом комментарии касательно того что вы устанавливаете. При этом, если у вас на машине уже установлены подобные компоненты, то вы можете пропустить их установку и скачать только то что вам нужно:
+Для представленного образа основой является представленный ниже bash скрипт. Тут в целом шаг за шагом расписаны комментарии касательно того что вы устанавливаете. При этом, если у вас на машине уже установлены подобные компоненты, то вы можете пропустить их установку и скачать только то что вам нужно:
 
 {% embed url="https://github.com/KLYN74R/KlyntarBaseImages/blob/main/Basic/setup.sh" %}
 
@@ -278,9 +278,7 @@ pnpm run build
 * <mark style="color:purple;">KLY\_ServicesAPI</mark>
 * <mark style="color:purple;">KLY\_WorkflowsAPI</mark>
 
-_<mark style="color:red;">**И мы конечно же покажем как это сделать!**</mark>_
-
-****
+### _<mark style="color:red;">И мы конечно же покажем как это сделать!</mark>_
 
 ### _**KLY\_Modules**_
 
@@ -346,13 +344,60 @@ Apollo
 
 В CLI дополнительные модули выглядят как обычные команды. Чтобы ваши пользователи могли различать их и не происходило коллизий(например когда в двух модулях будут идентичные команды), дайте им оригинальный префикс или сделайте единую команду с именем репозитория и скройте команды в подкомандах. Мы сейчас покажем как.
 
+<mark style="color:purple;">****</mark>
+
+<mark style="color:purple;">**UI part**</mark>
+
+Если у модуля также есть UI часть (что зачастую так и будет), вы сможете посетить:
+
+```shell
+
+http(s)://<your_interface>:<port>/modules
+```
+
+to find there the entry point to your module.\
+
+
+### _**KLY\_ServicesAPI**_
+
+> **ServiceAPI** - directory with API repositories to interact with the scope of service runned on Klyntar. Imagine if all smart contracts on ETH will have a unique design in your wallet, separate page with all available features specific to contract. Since we have wider power, we also have so complicated way to improve abilities of your Apollo instance.
+
+
+
+The same principle works for the services API. Each subdirectory - it's a repository. To check available services API go to
+
+```shell
+
+http(s)://<your_interface>:<port>/services
+```
+
+
+
+### _**KLY\_WorkflowsAPI**_
+
+> **WorkflowsAPI** - directory with API repositories to interact with symbiotes on Klyntar. Insofar as they can use different workflows(thanksfully to [Mutations principle](https://mastering.klyntar.org/beginning/mutations)),we need to make possible to use appropriate algorithms,build right events to send to symbiotes and use other specific features like traffic over TOR or threshold signatures. Imagine if you'll have ability to control your Bitcoin, Solana, Avalanche, Cosmos assets(native coins,tokens,etc.), execute smart contracts, make delegations using only one instrument. Yes,this is what Apollo do.
+
+\
+
+
+The same principle as for services API. Each subdirectory - it's a repository in this directory. To check your symbiotes and how to interact with them go to
+
+```shell
+
+http(s)://<your_interface>:<port>/symbiotes
+```
+
+
+
+### 🐱‍💻 <mark style="color:red;">Как написать собственный модуль</mark> 
+
 Предлагаю в качестве тестового примера сделать что-то более полезное чем HelloWorld. Например, давайте представим что где-то в интернете есть API сервер который принимает от вас перечень ваших адресов Bitcoin и Polygon и предоставляет информацию относительно того, куда лучше застейкать ваш унобтаниум на основании того, что на предоставленных адресах имеется учитывая дополнительные параметры (количество добытых блоков BTC, их возраст, сложность, возраст ваших входов. Для Polygon это может быть набор токенов что имеются на ваших адресах)
 
 Прикинув, мы можем предположить что в CLI это должно выглядеть как-то так:
 
 ```shell
 apollo uno-stats \
---addresses btc:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa, \
+--addresses btc:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa,\
 polygon:0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027
 ```
 
@@ -435,52 +480,13 @@ polygon:0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027
 }
 ```
 
-<mark style="color:purple;">**UI part**</mark>
-
-If module also has a UI part(which is often the case), then you'll have ability to visit:
-
-```shell
-
-http(s)://<your_interface>:<port>/modules
-```
-
-to find there the entry point to your module.\
 
 
-### _**KLY\_ServicesAPI**_
-
-> **ServiceAPI** - directory with API repositories to interact with the scope of service runned on Klyntar. Imagine if all smart contracts on ETH will have a unique design in your wallet, separate page with all available features specific to contract. Since we have wider power, we also have so complicated way to improve abilities of your Apollo instance.
-
-
-
-The same principle works for the services API. Each subdirectory - it's a repository. To check available services API go to
-
-```shell
-
-http(s)://<your_interface>:<port>/services
-```
-
-
-
-### _**KLY\_WorkflowsAPI**_
-
-> **WorkflowsAPI** - directory with API repositories to interact with symbiotes on Klyntar. Insofar as they can use different workflows(thanksfully to [Mutations principle](https://mastering.klyntar.org/beginning/mutations)),we need to make possible to use appropriate algorithms,build right events to send to symbiotes and use other specific features like traffic over TOR or threshold signatures. Imagine if you'll have ability to control your Bitcoin, Solana, Avalanche, Cosmos assets(native coins,tokens,etc.), execute smart contracts, make delegations using only one instrument. Yes,this is what Apollo do.
-
-\
-
-
-The same principle as for services API. Each subdirectory - it's a repository in this directory. To check your symbiotes and how to interact with them go to
-
-```shell
-
-http(s)://<your_interface>:<port>/symbiotes
-```
+Переходим к написанию
 
 
 
 ### 🧐 <mark style="color:red;">Как активировать новые модули</mark>
-
-### 🐱‍💻 <mark style="color:red;">Как написать собственный модуль</mark> 
 
 ### 🤓 <mark style="color:red;">Совет</mark>
 
