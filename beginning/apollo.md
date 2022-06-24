@@ -248,40 +248,28 @@ rm go1.18.linux-amd64.tar.gz
 * <mark style="color:purple;">KLY\_ServicesAPI</mark>
 * <mark style="color:purple;">KLY\_WorkflowsAPI</mark>
 
-И мы конечно же покажем вам как сделать это!\
+_<mark style="color:red;">**И мы конечно же покажем как это сделать!**</mark>_
 
+****
 
-**KLY\_Modules**
+### _**KLY\_Modules**_
 
-Directory for your external modules. This might be extra useful commands. Might be written by you or any other 3rd party. Must contain 2 directories **cli**(contains everything for commands in CLI) and **ui**(directory with everything for UI in browser). Soon we'll make a tutorial of HOWTO write modules for Apollo.
+Каталог для ваших внешних модулей. Это могут быть дополнительные полезные команды такие как генерация новых типов пар ключей для нового алгоритма подписи или получения актуальных данных по состоянию ваших узлов. Может быть написано вами или любым другим третьим лицом.&#x20;
 
-Each directory-is typically Git repository to allow you to easily update different modules independently if you need and swap versions. Moreover,soon you'll also have an amazing ability to verify authors cryptographically - via code signing. By having hash of repository you can verify authority and be sure that code is original using different crypto features like multisig or post-quantum cryptography,social staking and so on. We describe it in [Basic Security](https://mastering.klyntar.org/beginning/basic-security#additional-features) in our MasteringKlyntar book.
+Итак, _<mark style="color:purple;">**подключаемый модуль**</mark>_ - это репозиторий. Это сделано для удобства так как все умеют работать с Git, да и контролировать изменения легче через множество инструментов. Обновлять модули вы можете независимо друг от друга и при надобности-бегать между коммитами или ветками.
 
-\
-\
+Что касается структуры, то типичный модуль должен содержать 2 каталога
 
+* _<mark style="color:red;">**cli**</mark>_ (содержит новые команды для CLI)
+* _<mark style="color:red;">**ui**</mark>_ (каталог со всем для расширения интерфейса в браузере. Это поддиректории со стилями, маршрутами Fastify, скриптами и html шаблонами)
 
-* CLI part
+{% hint style="info" %}
+Как уже упоминалось ранее, скоро у вас появится удивительная возможность криптографически проверять авторов — с помощью подписи кода. Имея хэш репозитория, вы можете проверить подпись и быть уверенным, что код является оригинальным, используя различные криптографические функции, такие как мультиподпись или постквантовая криптография, социальный консенсус и так далее. Мы описываем это в разделе [_<mark style="color:red;">**Базовая безопасность**</mark>_](bazovaya-bezopasnost.md) в нашей книге MasteringKlyntar.
+{% endhint %}
 
-In CLI extra modules looks like ordinary commands. To allow your users to differ them, please, give them original prefix or make a single command with repository name and hide commands to subcommands
+**Подводя итог, ваше дерево каталогов на этом уровне должно выглядеть так:**
 
-* UI part
-
-If module also has a UI part(which is often the case), then you'll have ability to visit:
-
-```shell
-
-http(s)://<your_interface>:<port>/modules
-```
-
-to find there the entry point to your module.
-
-\
-
-
-**Summarizing this,your directories tree on these levels should look like this**
-
-```
+```bash
 Apollo
 │     
 │   
@@ -326,17 +314,26 @@ Apollo
 To update the repository with module go to appropriate directory **KLY\_Modules/\<your\_module>** and pull changes
 
 \
-\
+<mark style="color:purple;">**CLI part**</mark>
+
+In CLI extra modules looks like ordinary commands. To allow your users to differ them, please, give them original prefix or make a single command with repository name and hide commands to subcommands
+
+<mark style="color:purple;">**UI part**</mark>
+
+If module also has a UI part(which is often the case), then you'll have ability to visit:
+
+```shell
+
+http(s)://<your_interface>:<port>/modules
+```
+
+to find there the entry point to your module.\
 
 
-#### **KLY\_ServicesAPI**
-
-\
-
+### _**KLY\_ServicesAPI**_
 
 > **ServiceAPI** - directory with API repositories to interact with the scope of service runned on Klyntar. Imagine if all smart contracts on ETH will have a unique design in your wallet, separate page with all available features specific to contract. Since we have wider power, we also have so complicated way to improve abilities of your Apollo instance.
 
-\
 
 
 The same principle works for the services API. Each subdirectory - it's a repository. To check available services API go to
@@ -346,14 +343,9 @@ The same principle works for the services API. Each subdirectory - it's a reposi
 http(s)://<your_interface>:<port>/services
 ```
 
-\
-\
 
 
-#### **KLY\_WorkflowsAPI**
-
-\
-
+### _**KLY\_WorkflowsAPI**_
 
 > **WorkflowsAPI** - directory with API repositories to interact with symbiotes on Klyntar. Insofar as they can use different workflows(thanksfully to [Mutations principle](https://mastering.klyntar.org/beginning/mutations)),we need to make possible to use appropriate algorithms,build right events to send to symbiotes and use other specific features like traffic over TOR or threshold signatures. Imagine if you'll have ability to control your Bitcoin, Solana, Avalanche, Cosmos assets(native coins,tokens,etc.), execute smart contracts, make delegations using only one instrument. Yes,this is what Apollo do.
 
