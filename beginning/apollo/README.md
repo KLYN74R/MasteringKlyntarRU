@@ -22,7 +22,7 @@ coverY: 55.23975588491717
 * <mark style="color:red;"></mark>[<mark style="color:red;">Как сбилдить & запустить</mark>](./#kak-sbildit-and-zapustit)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Модульность</mark>](./#modulnost)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Как написать собственный модуль</mark>](./#kak-napisat-sobstvennyi-modul)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">В чём преимущества данного подхода</mark>](./#v-chyom-preimushestva-podobnogo-podkhoda)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">В чём преимущества такого подхода</mark>](./#v-chyom-preimushestva-podobnogo-podkhoda)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Совет</mark>](./#sovet)<mark style="color:red;"></mark>
 
 <mark style="color:red;"></mark>
@@ -684,7 +684,7 @@ http(s)://<interface>:port/modules/mysupermodule
 
 ![](<../../.gitbook/assets/image (2).png>)
 
-### 🧐 <mark style="color:red;">В чём преимущества подобного подхода</mark>
+### 🧐 <mark style="color:red;">В чём преимущества такого подхода</mark>
 
 Подобно тому как мутации происходят в природе, постоянно наделяя организмы новыми способностями, Apollo тоже будет развиваться за счёт роста экосистемы KLY и всей блокчейн индустрии.
 
