@@ -495,7 +495,7 @@ touch module.js
 
 CLI в Apollo работает на основе NPM пакета Commander
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 {% embed url="https://github.com/tj/commander.js" %}
 Здесь можете узнать больше
@@ -518,12 +518,83 @@ PROGRAM //globalvar
 .option('-a, --addresses <value>','TICKER:ADRR in CSV format.Example btc:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa,polygon:0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027')
 .option('-u, --url <value>','API server to get info')
 
-.action(async(opts,_cmd)=>
+.action(async(opts,_cmd)=>{
 
     // Тут уже парсите команды, параметры и выполняете нужную логику  
     
-)
+})
 ```
+
+Ок, можно сказать что уже готово, осталось только подключить ваш модуль для того чтоб он стал доступен из CLI. Для этого отредактируйте файл configuration.json в корне Apollo. Файл имеет такой вид(в случае простейшей конфигурации)
+
+```json
+{
+    "DEFAULT":{
+        "LANG":"EN",
+        "MODE":"light"
+    },
+
+    "FASTIFY_OPTIONS":{
+        "logger":false,
+        "http2":false,
+        "https":{
+            "enable":false,
+            "key":"resources/cert.key",
+            "cert":"resources/cert.pem"
+        }
+    },
+
+    "EXTRA_CLI": [
+        "KLY_Modules/init/cli/init.js"
+    ],
+
+    "EXTRA_UI": [
+        
+        {
+
+            "TYPE":"service",
+            
+            "ALIAS":"Service 0",
+
+            "PATH":"KLY_ServicesAPI/some_service/ui/route0.js",
+            
+            "OPTIONS":{
+             
+                "prefix":"/service0"
+            
+            }
+
+        },
+
+        {
+
+            "PATH":"KLY_Modules/init/ui/routes.js",
+
+            "OPTIONS":{
+             
+                "prefix":"/"
+            
+            }
+
+        }
+        
+    ]
+
+}
+```
+
+Добавьте путь к вашему модулю в EXTRA\_CLI
+
+```json
+"EXTRA_CLI": [
+        "KLY_Modules/init/cli/init.js",
+        "KLY_Modules/MySuperModule/cli/module.js",
+],
+```
+
+Теперь запустив CLI вы должны будете обнаружить команды из данного модуля в списке общедоступных.
+
+![](<../.gitbook/assets/image (2).png>)
 
 ### _<mark style="color:purple;">**UI**</mark>_
 
@@ -538,6 +609,46 @@ PROGRAM //globalvar
 ![](../.gitbook/assets/fastify-landscape-outlined.svg)
 
 {% embed url="https://github.com/fastify/fastify" %}
+
+![Если вам интересно, то можете познакомится ближе с данным продуктом](<../.gitbook/assets/image (3).png>)
+
+А вот собственно набор плагинов. Они так же могут дополнить возможности вашего Apollo путём включения их как модулей.
+
+{% embed url="https://www.fastify.io/ecosystem/" %}
+
+```bash
+cd MySuperModule/ui
+
+#Создайте необходимую и удобную вам иерархию
+mkdir templates scripts styles
+
+#Создадим точку входа
+touch routes.js
+```
+
+Пусть routes.js выглядит как-то так
+
+```javascript
+export default (fastify, options, next) => {
+
+    //_______________________________________ DEFAULT ROUTES ________________________________________
+
+    //Start page
+    fastify.get('/',(request, reply) =>
+    
+        handler(reply,'KLY_Modules/init/ui/templates/index.ejs',{text:'Hello,this is the entry point to control Klyntar'})
+
+    )
+
+    fastify.get('/another',(request, reply)=>
+        
+        // your own logic
+        
+    )
+
+```
+
+После этого, перейдите в тот же конфиг и добавьте путь к модулю в раздел EXTRA\_UI
 
 
 
