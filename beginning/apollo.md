@@ -22,7 +22,7 @@ coverY: 55.23975588491717
 * <mark style="color:red;"></mark>[<mark style="color:red;">Как сбилдить & запустить</mark>](apollo.md#kak-sbildit-and-zapustit)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Модульность</mark>](apollo.md#modulnost)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Как написать собственный модуль</mark>](apollo.md#kak-napisat-sobstvennyi-modul)<mark style="color:red;"></mark>
-* [<mark style="color:red;">Как активировать новые модули</mark>](apollo.md#kak-aktivirovat-novye-moduli)<mark style="color:red;"></mark>
+* <mark style="color:red;"></mark>[<mark style="color:red;">В чём преимущества данного подхода</mark>](apollo.md#v-chyom-preimushestva-podobnogo-podkhoda)<mark style="color:red;"></mark>
 * <mark style="color:red;"></mark>[<mark style="color:red;">Совет</mark>](apollo.md#sovet)<mark style="color:red;"></mark>
 
 <mark style="color:red;"></mark>
@@ -495,7 +495,7 @@ touch module.js
 
 CLI в Apollo работает на основе NPM пакета Commander
 
-![](<../.gitbook/assets/image (2) (1).png>)
+![](<../.gitbook/assets/image (2) (1) (1).png>)
 
 {% embed url="https://github.com/tj/commander.js" %}
 Здесь можете узнать больше
@@ -594,7 +594,7 @@ PROGRAM //globalvar
 
 Теперь запустив CLI вы должны будете обнаружить команды из данного модуля в списке общедоступных.
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 ### _<mark style="color:purple;">**UI**</mark>_
 
@@ -626,7 +626,7 @@ mkdir templates scripts styles
 touch routes.js
 ```
 
-Пусть routes.js выглядит как-то так
+Пусть _<mark style="color:purple;">**routes.js**</mark>_ выглядит как-то так
 
 ```javascript
 export default (fastify, options, next) => {
@@ -650,9 +650,45 @@ export default (fastify, options, next) => {
 
 После этого, перейдите в тот же конфиг и добавьте путь к модулю в раздел EXTRA\_UI
 
+```javascript
+"EXTRA_UI":[
 
+    ...,
 
-### 🧐 <mark style="color:red;">Как активировать новые модули</mark>
+    {
+
+            "PATH":"KLY_Modules/MySuperModule/ui/routes.js",
+
+            "OPTIONS":{
+             
+                "prefix":"/mysupermodule"
+            
+            }
+
+        }
+
+]
+```
+
+После этого, вам станет доступен функционал вашего модуля по адресу
+
+```
+http(s)://<interface>:port/modules/mysupermodule
+```
+
+Однако, вы сможете получить доступ даже просто перейдя на главную страницу, а дальше следуя указаниям и привязкам к кнопкам в главном меню.
+
+{% hint style="info" %}
+Мы это упомянули так как по дефолту в UI уже будет автоматически включён модуль _<mark style="color:red;">**init.**</mark>_ Он включает в себя логику главной страницы(), стили и так далее, но главное - он обеспечивает доступ ко всем остальным возможностям Apollo-создаст кнопки для перехода к другим модулям, API сервисов и так далее. _<mark style="color:red;">****</mark>_&#x20;
+{% endhint %}
+
+![](<../.gitbook/assets/image (2).png>)
+
+### 🧐 <mark style="color:red;">В чём преимущества подобного подхода</mark>
+
+Подобно тому как мутации происходят в природе, постоянно наделяя организмы новыми способностями, Apollo тоже будет развиваться за счёт роста экосистемы KLY и всей блокчейн индустрии.
+
+На уровне кода можно сказать что удобность в том, что&#x20;
 
 ### 🤓 <mark style="color:red;">Совет</mark>
 
