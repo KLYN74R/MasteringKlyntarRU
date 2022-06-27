@@ -15,6 +15,7 @@
   * [📄 Рабочие процессы(workflows)](beginning/architecture/rabochie-processy-workflows.md)
   * [🏛 Социальный консенсус](beginning/arkhitektura/socialnyi-konsensus.md)
 * [🔑 Криптография](beginning/kriptografiya/README.md)
+  * [🎢 Криптоленд](beginning/kriptografiya/kriptolend.md)
   * [🛡 Симметричное шифрование](beginning/kriptografiya/simmetrichnoe-shifrovanie.md)
   * [#⃣ Хэш функции](beginning/kriptografiya/khesh-funkcii.md)
   * [🔐 Схемы генерации ключей](beginning/kriptografiya/skhemy-generacii-klyuchei.md)
