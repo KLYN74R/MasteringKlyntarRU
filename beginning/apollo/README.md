@@ -180,7 +180,7 @@ apollo ui
 apt-get update -y && apt-get upgrade -y
 ```
 
-Затем установите необходимые бинарники
+Затем установите необходимые пакеты
 
 ```bash
 apt-get install nano sudo git curl wget build-essential libreadline-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev -y
@@ -230,7 +230,7 @@ npm install pnpm -g
 npm install node-gyp -g
 ```
 
-Последним необходимо установить Go
+Последним необходимо установить <mark style="color:purple;">Go</mark>
 
 ```bash
 #Fetch archive
