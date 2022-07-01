@@ -15,17 +15,7 @@ coverY: 55.23975588491717
 
 ![](https://readme-typing-svg.herokuapp.com/?font=Major+Mono+Display\&size=48\&duration=4000\&color=C20000\&center=true\&vCenter=true\&width=300\&height=80\&lines=Apollo)
 
-### 📖 Содержание
 
-* <mark style="color:red;"></mark>[<mark style="color:red;">Благодарность</mark>](./#blagodarnost)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Введение</mark>](./#vvedenie)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Как сбилдить & запустить</mark>](./#kak-sbildit-and-zapustit)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Модульность</mark>](./#modulnost)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Как написать собственный модуль</mark>](./#kak-napisat-sobstvennyi-modul)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">В чём преимущества такого подхода</mark>](./#v-chyom-preimushestva-podobnogo-podkhoda)<mark style="color:red;"></mark>
-* <mark style="color:red;"></mark>[<mark style="color:red;">Совет</mark>](./#sovet)<mark style="color:red;"></mark>
-
-<mark style="color:red;"></mark>
 
 ### 👨‍🚀 <mark style="color:red;">Благодарность</mark>
 
@@ -177,7 +167,7 @@ apollo ui
 Для начала традиционно
 
 ```bash
-apt-get update -y && apt-get upgrade -y
+apt-get update && apt-get upgrade -y
 ```
 
 Затем установите необходимые пакеты
