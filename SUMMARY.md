@@ -27,6 +27,7 @@
   * [🌀 Кольцевые подписи](beginning/kriptografiya/kolcevye-podpisi.md)
   * [🕵 VRF](beginning/kriptografiya/vrf.md)
   * [🎁 Прочее](beginning/kriptografiya/prochee.md)
+* [🏞 Нативные смарт-контракты](beginning/nativnye-smart-kontrakty.md)
 * [🤖 Сервисы](beginning/servisy/README.md)
   * [🤩 Интро](beginning/servisy/intro.md)
   * [🏭 Архитектура](beginning/servisy/arkhitektura.md)
