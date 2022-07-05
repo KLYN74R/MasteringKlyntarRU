@@ -58,14 +58,43 @@ let isVerified = verify(keypair.publicKey,"YOU DATA TO SIGN",signature)
 
 Целью создания такого репозитория была подготовка к релизу [_<mark style="color:purple;">**ValarDohaeris**</mark>_](../relizy/valardohaeris.md) <mark style="color:red;"></mark> в рамках которого мы работали над тем, чтоб владельцы приватных ключей других блокчейн проектов могли легко взаимодействовать с KLYNTAR. Так например в Apollo вы можете подтвердить владения своими приватными ключами чтоб узлы KLYNTAR распознали количество унобтаниума на ваших кошельках и могли понять сколько блоков вы сгенерировали в Filecoin или сколько токенов на вашем счету в BSC. Глядя на него и можно понять что мы имели ввиду когда говорили про удобство использования - хороший и понятный README и однотипная структура и вот уже кто угодно может ним пользоваться.
 
+```javascript
+//CRYPTO is klyntar,algorand,arweave,eos,eth_like,filecoin,harmony,helium,mina,polkadot,ripple,solana,stellar,zilliqa(unimplemented)
+//TIP: Check the directories of package to get available formats or https://github.com/KLYN74R/ValarDohaeris
+
+import VD from '@klyntar/valardohaeris/<CRYPTO>/vd.js'
+
+
+//_______________________________ USE DEFAULT SETS OF FUNCTIONS _______________________________
+
+
+let keys=await VD.generate()
+
+console.log(keys)//Make sure format is OK
+
+//Sign data in the string format
+let data='SIGN ME',
+
+    signature=await VD.sign(data,keys.privateKey)
+
+console.log('Your signature in transportable format => ',signature)
+
+console.log('Is ok => ',await VD.verify('ANOTHER DATA',signature,keys.address),` (should be ❌)`)
+
+console.log('Is ok => ',await VD.verify(data,signature,keys.address),'(should be ✔️)')
+
+
+
+//_______________________________ AND EXPLORE SPECIFIC FUNCTIONS _______________________________
+
+console.log('Address in another format: ',VD.toPUB_K1(keys.address))
+```
+
 ### <mark style="color:red;">Награды разработчикам</mark>
 
 Разумеется работа на пользу KLYNTAR не может оказаться незамеченной. Подробней вы сможете узнать в разделе [_<mark style="color:yellow;">**Контрибуторам**</mark>_](../kontributoram.md), а сейчас просто коротко упомяну что в рамках социального консенсуса, прямо в интерфейсе Apollo(или других 3rd party инструментов) пользователи смогут проголосовать за наиболее полезные вклады в KLYNTAR. Неважно, разработчик плагинов вы, создали несколько паков с коннекторами или добавили много алгоритмов(как в данном случае речь идёт именно об этом) - всё это будет учтено на уровне метрик типа количество клонирований, личное предпочтение пользователей и разработчиков, количество сервисов и/или смарт контрактов с использованием данных алгоритмов(и их активность) и так далее.
 
-Ввиду этого мы допускаем что фонд сформированный на основе комиссий будет распределён между &#x20;
+Ввиду этого мы допускаем что фонд сформированный на основе комиссий будет распределён между командами разработок или одиночными разработчиками.
 
+Что ещё интересно, так это разного рода фичи(ну куда же без них). Так например разработчик который победит сможет вместо награды заставить определенные адреса обменять KLY на какие-то токены поверх KLYNTAR. Однако об этом узнаете в указанной ссылке для контрибуторов.
 
-
-### <mark style="color:red;">Ссылки</mark>
-
-<mark style="color:red;"></mark>
