@@ -5,3 +5,4 @@ coverY: 0
 
 # ☄ SpookyAction
 
+![](../../.gitbook/assets/SpookyAction.png)

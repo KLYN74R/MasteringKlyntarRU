@@ -5,3 +5,6 @@ coverY: 0
 
 # 📄 Рабочие процессы(workflows)
 
+![](../../.gitbook/assets/Scarless.png)
+
+![](../../.gitbook/assets/ValidThread.drawio.png)
