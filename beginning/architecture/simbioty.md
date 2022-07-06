@@ -6,3 +6,6 @@ coverY: -173.4193548387097
 
 # 👽 Симбиоты
 
+![](../../.gitbook/assets/ControllersInstantBack.png)
+
+![](../../.gitbook/assets/OffspringCreation.png)

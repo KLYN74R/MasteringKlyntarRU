@@ -6,3 +6,4 @@ coverY: 71.97907585004359
 
 # 🏛 Социальный консенсус
 
+![](../../.gitbook/assets/LitecoinChallenge.png)
