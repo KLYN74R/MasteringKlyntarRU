@@ -6,3 +6,5 @@ coverY: 0
 # 🤩 Интро
 
 ![](../../.gitbook/assets/Service.png)
+
+![](../../.gitbook/assets/AvaxSolana.png)
