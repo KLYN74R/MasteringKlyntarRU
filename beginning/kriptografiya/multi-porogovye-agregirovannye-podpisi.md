@@ -15,13 +15,17 @@ coverY: 50.40414507772021
 Поскольку в KLYNTAR как мультиподписи так и пороговые подписи построены с использованием одной кривой(вышеупомянутая BLS12-381), то прежде надо познакомится с ней.
 
 {% hint style="info" %}
-Если вы ничего до этого не слышали об этой кривой и представленных механизмах, то не волнуйтесь - BLS так же используется в таких именитых проектах как ZCash,Algorand,Chia и так же планируется использование в Ethereum 2.0
+Если вы ничего до этого не слышали об этой кривой и представленных механизмах, то не волнуйтесь - BLS так же используется в таких именитых проектах как ZCash,Algorand,Chia,Filecoin,Dfinity(ICP) и так же планируется использование в Ethereum 2.0
 {% endhint %}
+
+_<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая которая отлично подходит для так называемого спаривания в процессах криптографии на основе пар
 
 ### <mark style="color:red;">Мультиподписи</mark>
 
-
+![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7).png>)
 
 ### <mark style="color:red;">Пороговые подписи (TBLS)</mark>
+
+![https://asecuritysite.com/shares/](<../../.gitbook/assets/image (3).png>)
 
 ### <mark style="color:red;">Важность для KLYNTAR в будущем</mark>
