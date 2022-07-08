@@ -54,7 +54,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 Перейдите в Cryptoland
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (5) (1).png>)
 
 В раскрывающемся меню выберите multisig и в разделе операций generate. Теперь сгенерируйте пару
 
@@ -62,7 +62,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 Для теста сгенерируйте и сохраните себе несколько пар. Давайте сгенерируем 3 пары
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 {% hint style="info" %}
 Не забывайте сохранять свои пары. Автоматическое сохранение добавится в будущих версиях Apollo
@@ -114,13 +114,19 @@ koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6M
 
 А дальше начинается криптографическая магия. Агрегация. Для этого, три стороны или любое другое лицо могут взять публичные подписи и адреса и агрегировать их воедино
 
-Агрегация публичных ключей
+<mark style="color:red;">**Агрегация публичных ключей**</mark>
 
 ![Укажите адреса разделяя их двоеточием](<../../.gitbook/assets/image (7).png>)
 
-<mark style="color:yellow;">**Агрегация подписей**</mark>
+<mark style="color:red;">**Агрегация подписей**</mark>
 
-<mark style="color:yellow;">****</mark>
+![Аналогично разделяйте подписи двоеточием](<../../.gitbook/assets/image (5).png>)
+
+Теперь вы получили пару. Давайте проверим
+
+![](<../../.gitbook/assets/image (6).png>)
+
+Думаю, теперь невероятные свойства стали более наглядными и очевидными
 
 <mark style="color:yellow;">**Пороговые подписи**</mark>
 
