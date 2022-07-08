@@ -58,14 +58,14 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 В раскрывающемся меню выберите multisig и в разделе операций generate. Теперь сгенерируйте пару
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (8).png>)
 
 Для теста сгенерируйте и сохраните себе несколько пар. Давайте сгенерируем 3 пары
 
 ![](<../../.gitbook/assets/image (6).png>)
 
 {% hint style="info" %}
-Не забывайте сохранять свои пары. Автоматическое сохранение добавиться в будущих версиях Apollo
+Не забывайте сохранять свои пары. Автоматическое сохранение добавится в будущих версиях Apollo
 {% endhint %}
 
 Вот пары которые получились
@@ -96,7 +96,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 Теперь эти 3 стороны могут подписать какое-то сообщение. Пусть это будет <mark style="color:purple;">**SEND 5 KLY TO BOB**</mark>
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (4).png>)
 
 У вас должны будут получится 3 подписи
 
@@ -107,6 +107,20 @@ lu29FIXc7hJjcvfA2muJTuHvr47il4VrAIaFzQl3OTLTprcGjTwabporzxg/VK4gCgzgoJ6fLL/MbmKk
 
 koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6MCGklRhk312Esl2vt3Zc9f7NwLfKiy+ZC+bEuYdDgGIl5Bl6v
 ```
+
+Вы можете взять любую из них и соответствующий публичный ключ и проверить
+
+![Проверьте так же другие подписи](<../../.gitbook/assets/image (3).png>)
+
+А дальше начинается криптографическая магия. Агрегация. Для этого, три стороны или любое другое лицо могут взять публичные подписи и адреса и агрегировать их воедино
+
+Агрегация публичных ключей
+
+![Укажите адреса разделяя их двоеточием](<../../.gitbook/assets/image (7).png>)
+
+<mark style="color:yellow;">**Агрегация подписей**</mark>
+
+<mark style="color:yellow;">****</mark>
 
 <mark style="color:yellow;">**Пороговые подписи**</mark>
 
