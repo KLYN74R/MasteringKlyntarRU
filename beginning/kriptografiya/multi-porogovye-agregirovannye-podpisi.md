@@ -50,7 +50,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 Для общего понимания хода работы давайте сгенерируем ключи и протестируем их возможности. Так же это будет что-то типа полезного пособия если у вас возникнут трудности с их использованием в Apollo. Ну или если вы мало что поняли из информации выше, то сейчас получите более наглядное объяснение
 
-<mark style="color:yellow;">**Мультиподписи**</mark>
+### <mark style="color:yellow;">**Мультиподписи**</mark>
 
 Перейдите в Cryptoland
 
@@ -128,7 +128,7 @@ koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6M
 
 Думаю, теперь невероятные свойства стали более наглядными и очевидными
 
-<mark style="color:yellow;">**Пороговые подписи**</mark>
+### <mark style="color:yellow;">**Пороговые подписи**</mark>
 
 В Cryptoland теперь выберите _<mark style="color:purple;">**thresholdsig**</mark>_&#x20;
 
