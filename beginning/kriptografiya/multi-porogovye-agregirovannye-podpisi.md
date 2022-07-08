@@ -22,7 +22,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 ### <mark style="color:red;">Мультиподписи</mark>
 
-![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7).png>)
+![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1).png>)
 
 ### <mark style="color:red;">Пороговые подписи (TBLS)</mark>
 
@@ -45,6 +45,24 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 Этого можно достичь с пороговыми подписями. В KLYNTAR
 
 ![https://asecuritysite.com/shares/](<../../.gitbook/assets/image (3).png>)
+
+### <mark style="color:red;">Демонстрация</mark>
+
+Для общего понимания хода работы давайте сгенерируем ключи и протестируем их возможности. Так же это будет что-то типа полезного пособия если у вас возникнут трудности с их использованием в Apollo. Ну или если вы мало что поняли из информации выше, то сейчас получите более наглядное объяснение
+
+<mark style="color:yellow;">**Мультиподписи**</mark>
+
+Перейдите в Cryptoland
+
+![](<../../.gitbook/assets/image (5).png>)
+
+<mark style="color:yellow;">**Пороговые подписи**</mark>
+
+В Cryptoland теперь выберите _<mark style="color:purple;">**thresholdsig**</mark>_&#x20;
+
+![](<../../.gitbook/assets/image (7).png>)
+
+<mark style="color:yellow;">****</mark>
 
 ### <mark style="color:red;">Важность для KLYNTAR в будущем</mark>
 
