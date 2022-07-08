@@ -22,7 +22,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 ### <mark style="color:red;">Мультиподписи</mark>
 
-![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1).png>)
+![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1) (1).png>)
 
 ### <mark style="color:red;">Пороговые подписи (TBLS)</mark>
 
@@ -44,7 +44,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 Этого можно достичь с пороговыми подписями. В KLYNTAR
 
-![https://asecuritysite.com/shares/](<../../.gitbook/assets/image (3).png>)
+![https://asecuritysite.com/shares/](<../../.gitbook/assets/image (3) (1).png>)
 
 ### <mark style="color:red;">Демонстрация</mark>
 
@@ -56,11 +56,63 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 ![](<../../.gitbook/assets/image (5).png>)
 
+В раскрывающемся меню выберите multisig и в разделе операций generate. Теперь сгенерируйте пару
+
+![](<../../.gitbook/assets/image (7).png>)
+
+Для теста сгенерируйте и сохраните себе несколько пар. Давайте сгенерируем 3 пары
+
+![](<../../.gitbook/assets/image (6).png>)
+
+{% hint style="info" %}
+Не забывайте сохранять свои пары. Автоматическое сохранение добавиться в будущих версиях Apollo
+{% endhint %}
+
+Вот пары которые получились
+
+```
+//1
+
+{
+   "privateKey":"caad28a7da57fb28879bfdd886714629e4152553a28540caed6f51531f5af61a",
+   "pubKey":"7QMxLg6GJwQYjc8B2WBEvaQq3TfeBhgBqHGneFu43oLfwhovrPGykbkUGe94FacSuG"
+ }
+
+//2
+
+{
+   "privateKey":"c707f21257f4d0ff4edf4b7b79475049cd1e901b58bec6203d85b1a7552dcfa3",
+   "pubKey":"6XFgbxpwngL7QTpui9S3JgAhnWmQqr2JswtKBVPM8dUKS1AZDpXtmyZNRmHfWRvTU6"
+}
+
+//3
+
+{
+   "privateKey":"9a495ccfc98a9417f45098db524a4eec318784dce7f42c3fce03a0ae075d22a6",
+   "pubKey":"69pYH3EGQSQ6nP9qSXttj4nDkPFWRjsZt2kp11wpcpqEiXoT3Gg1SNKErgT3zAYnPd"
+}
+
+```
+
+Теперь эти 3 стороны могут подписать какое-то сообщение. Пусть это будет <mark style="color:purple;">**SEND 5 KLY TO BOB**</mark>
+
+![](<../../.gitbook/assets/image (3).png>)
+
+У вас должны будут получится 3 подписи
+
+```
+rXICCzA2OoKoZQ97kJNU9ghx7IZ4Y9dDHgdONRfKdzWgZxIxqRI217Gs9bAMGBnpFZ54bD/V1Ggr5nDwNwsUzkVpxx/xB6Zh2AaB5tHkYO8ny/JikY4ihcRAw20B16g8
+
+lu29FIXc7hJjcvfA2muJTuHvr47il4VrAIaFzQl3OTLTprcGjTwabporzxg/VK4gCgzgoJ6fLL/MbmKkfFfmQEU5amwGRGfYisL6NJp1E9GpXOPKU+JZVmvQkf+XhseE
+
+koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6MCGklRhk312Esl2vt3Zc9f7NwLfKiy+ZC+bEuYdDgGIl5Bl6v
+```
+
 <mark style="color:yellow;">**Пороговые подписи**</mark>
 
 В Cryptoland теперь выберите _<mark style="color:purple;">**thresholdsig**</mark>_&#x20;
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
 <mark style="color:yellow;">****</mark>
 
