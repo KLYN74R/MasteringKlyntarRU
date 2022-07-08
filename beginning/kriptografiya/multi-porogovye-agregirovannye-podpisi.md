@@ -22,7 +22,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 ### <mark style="color:red;">Мультиподписи</mark>
 
-![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1) (1).png>)
+![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 ### <mark style="color:red;">Пороговые подписи (TBLS)</mark>
 
@@ -116,7 +116,7 @@ koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6M
 
 <mark style="color:red;">**Агрегация публичных ключей**</mark>
 
-![Укажите адреса разделяя их двоеточием](<../../.gitbook/assets/image (7).png>)
+![Укажите адреса разделяя их двоеточием](<../../.gitbook/assets/image (7) (1).png>)
 
 <mark style="color:red;">**Агрегация подписей**</mark>
 
@@ -132,9 +132,19 @@ koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6M
 
 В Cryptoland теперь выберите _<mark style="color:purple;">**thresholdsig**</mark>_&#x20;
 
-![](<../../.gitbook/assets/image (7) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1).png>)
 
-<mark style="color:yellow;">****</mark>
+Давайте смоделируем ситуацию - пусть вы с 5 другими друзьями хотите создать такой адрес, произвести какое-либо действие с которого можно будет только по соглашению 4 друзей. Имеем ситуацию 4/6. Перед вами будут такие поля
+
+![](<../../.gitbook/assets/image (1).png>)
+
+Введём наш порог 4, наш ID(пусть будет 1) и ID других друзей. В качестве ID можно выбрать что угодно, но легче пользоваться числовыми идентификаторами. Раз количество сторон 6, то и идентификаторов должно быть 6(включительно с вашим)
+
+![](<../../.gitbook/assets/image (7).png>)
+
+Вы получите такой вот большой вывод
+
+![](<../../.gitbook/assets/image (9).png>)
 
 ### <mark style="color:red;">Важность для KLYNTAR в будущем</mark>
 
