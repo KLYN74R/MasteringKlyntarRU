@@ -22,7 +22,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 ### <mark style="color:red;">Мультиподписи</mark>
 
-![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
+![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
 
 ### <mark style="color:red;">Пороговые подписи (TBLS)</mark>
 
@@ -44,7 +44,7 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 Этого можно достичь с пороговыми подписями. В KLYNTAR
 
-![https://asecuritysite.com/shares/](<../../.gitbook/assets/image (3) (1).png>)
+![https://asecuritysite.com/shares/](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 ### <mark style="color:red;">Демонстрация</mark>
 
@@ -54,15 +54,15 @@ _<mark style="color:purple;">**BLS(Barreto-Lynn-Scott)**</mark>_ кривая к
 
 Перейдите в Cryptoland
 
-![](<../../.gitbook/assets/image (5) (1).png>)
+![](<../../.gitbook/assets/image (5) (1) (1).png>)
 
 В раскрывающемся меню выберите multisig и в разделе операций generate. Теперь сгенерируйте пару
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (1).png>)
 
 Для теста сгенерируйте и сохраните себе несколько пар. Давайте сгенерируем 3 пары
 
-![](<../../.gitbook/assets/image (6) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1).png>)
 
 {% hint style="info" %}
 Не забывайте сохранять свои пары. Автоматическое сохранение добавится в будущих версиях Apollo
@@ -110,21 +110,21 @@ koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6M
 
 Вы можете взять любую из них и соответствующий публичный ключ и проверить
 
-![Проверьте так же другие подписи](<../../.gitbook/assets/image (3).png>)
+![Проверьте так же другие подписи](<../../.gitbook/assets/image (3) (1).png>)
 
 А дальше начинается криптографическая магия. Агрегация. Для этого, три стороны или любое другое лицо могут взять публичные подписи и адреса и агрегировать их воедино
 
 <mark style="color:red;">**Агрегация публичных ключей**</mark>
 
-![Укажите адреса разделяя их двоеточием](<../../.gitbook/assets/image (7) (1).png>)
+![Укажите адреса разделяя их двоеточием](<../../.gitbook/assets/image (7) (1) (1).png>)
 
 <mark style="color:red;">**Агрегация подписей**</mark>
 
-![Аналогично разделяйте подписи двоеточием](<../../.gitbook/assets/image (5).png>)
+![Аналогично разделяйте подписи двоеточием](<../../.gitbook/assets/image (5) (1).png>)
 
 Теперь вы получили пару. Давайте проверим
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 Думаю, теперь невероятные свойства стали более наглядными и очевидными
 
@@ -132,7 +132,7 @@ koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6M
 
 В Cryptoland теперь выберите _<mark style="color:purple;">**thresholdsig**</mark>_&#x20;
 
-![](<../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 Давайте смоделируем ситуацию - пусть вы с 5 другими друзьями хотите создать такой адрес, произвести какое-либо действие с которого можно будет только по соглашению 4 друзей. Имеем ситуацию 4/6. Перед вами будут такие поля
 
@@ -140,11 +140,51 @@ koPFh4Qyu3RNDCHAUK0Jj9gvYwMSGHNydcubZee3ESET3/kwufBAF0WSDJ3hnTO6DsECG9+Z+B02xD6M
 
 Введём наш порог 4, наш ID(пусть будет 1) и ID других друзей. В качестве ID можно выбрать что угодно, но легче пользоваться числовыми идентификаторами. Раз количество сторон 6, то и идентификаторов должно быть 6(включительно с вашим)
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
 Вы получите такой вот большой вывод
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (1).png>)
+
+<mark style="color:orange;">**Первым идёт вектор верификации**</mark>
+
+Это необходимый компонент для пороговых подписей который поможет убедиться сторонам(в данном случае вашим остальным 5 друзьям) что разделение секрета прошло безопасно, что та часть которую они получили - валидная и что каждая из сторон получила не больше чем нужно(то бишь всё будет безопасно и порог в 4/6 не будет нарушен)
+
+_<mark style="color:red;">**Он публичный. Отправьте его остальным друзьям**</mark>_
+
+<mark style="color:orange;">**Далее - шары**</mark>
+
+Это компонент так называемой _<mark style="color:purple;">**распределённой генерации ключа**</mark>_(DKG).Они отправляются по одной каждому другу и не должны быть где-то опубликованы. Это гарантия в первую очередь вашей же безопасности. Шару с вашим идентификатором оставляете у себя (там где <mark style="color:purple;">**For user with id 1**</mark> так как вы ранее выбрали такой ID)
+
+Они НЕ публичные, а отправляются тайно каждому другу
+
+<mark style="color:orange;">**Последнее - ваш обновлённый ID**</mark>
+
+Так же сохраните его. Он необходим будет для верификации шар и генерации частичной подписи
+
+### <mark style="color:yellow;">Что дальше?</mark>
+
+Дальше ваши 6 друзей повторяют у себя в кошельках тоже самое. Только им нужно вставить свой ID и аналогичный набор идентификаторов для всей вашей группы(тоже 1,2,3,4,5,6 как генерировал первый друг которым являетесь вы в этом примере).
+
+<mark style="color:yellow;">**Друг с ID=2**</mark>
+
+![](<../../.gitbook/assets/image (6).png>)
+
+<mark style="color:yellow;">**Друг с ID=3**</mark>
+
+![](<../../.gitbook/assets/image (5).png>)
+
+<mark style="color:yellow;">**Друг с ID=4**</mark>
+
+![](<../../.gitbook/assets/image (3).png>)
+
+<mark style="color:yellow;">**Друг с ID=5**</mark>
+
+![](<../../.gitbook/assets/image (7).png>)
+
+<mark style="color:yellow;">**Друг с ID=6**</mark>
+
+![](<../../.gitbook/assets/image (10).png>)
 
 ### <mark style="color:red;">Важность для KLYNTAR в будущем</mark>
 
