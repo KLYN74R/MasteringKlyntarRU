@@ -67,7 +67,13 @@ _<mark style="color:purple;">**Dilithium**</mark>_
 
 ![](<../../.gitbook/assets/image (16).png>)
 
-Сами создатели рекомендуют использовать набор параметров Dilithium3, мы же используем Dilithium5 ввиду большей безопасности. Однако, для изменения уровня безопасности достаточно просто поменять одну строчку так что можно будет проводить такие изменения при необходимости.
+Сами создатели рекомендуют использовать набор параметров Dilithium3, мы же используем Dilithium5 ввиду большей безопасности. Однако, для изменения уровня безопасности достаточно просто поменять одну строчку так что можно будет проводить такие изменения при необходимости. Вот сравнительная таблица по уровнях безопасности согласно NIST
+
+
+
+<table><thead><tr><th data-type="number">Уровень безопасности NIST</th><th align="center">Взлом такой же трудный как и ...</th></tr></thead><tbody><tr><td>1</td><td align="center">Восстановление ключа AES-128 методом полного перебора</td></tr><tr><td>2</td><td align="center">Поиск коллизии SHA-256 методом полного перебора</td></tr><tr><td>3</td><td align="center">Восстановление ключа AES-192 методом полного перебора</td></tr><tr><td>4</td><td align="center">Поиск коллизии SHA-384 методом полного перебора</td></tr><tr><td>5</td><td align="center">Восстановление ключа AES-256 методом полного перебора</td></tr></tbody></table>
+
+
 
 Так же оставляем вам ссылку на имплементацию API под Node.js в репозитории Cryptoland
 
@@ -91,7 +97,7 @@ _<mark style="color:purple;">**BLISS**</mark>_
 
 ### <mark style="color:red;">**Протоколы обмена ключами**</mark>
 
-<mark style="color:red;">****</mark>![](<../../.gitbook/assets/image (7).png>)<mark style="color:red;">****</mark>
+![](<../../.gitbook/assets/image (7).png>)
 
 ### <mark style="color:red;">**Ассиметричное шифрование**</mark>
 
@@ -101,3 +107,4 @@ _<mark style="color:purple;">**BLISS**</mark>_
 
 {% embed url="https://blog.cloudflare.com/nist-post-quantum-surprise/" %}
 
+{% embed url="https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms" %}
