@@ -55,6 +55,8 @@ _<mark style="color:purple;">**Dilithium**</mark>_
 
 ![](<../../.gitbook/assets/image (10).png>)
 
+
+
 Данный алгоритм является NIST кандидатом и предоставляет возможность генерировать пары ключей и подписи. Широко популярный, изучается на самых высоких уровнях. Он включён в постквантовую реализацию [_<mark style="color:yellow;">**OpenSSL**</mark>_](https://github.com/open-quantum-safe/openssl), изучается CloudFlare и входит в их репозиторий CIRCL
 
 {% embed url="https://github.com/cloudflare/circl" %}
@@ -64,6 +66,12 @@ _<mark style="color:purple;">**Dilithium**</mark>_
 В зависимости от уровней безопасности NIST существует несколько реализаций. Вот их характеристики
 
 ![](<../../.gitbook/assets/image (16).png>)
+
+
+
+_<mark style="color:purple;">**BLISS**</mark>_
+
+
 
 {% embed url="https://bliss.di.ens.fr/" %}
 
