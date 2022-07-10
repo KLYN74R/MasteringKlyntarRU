@@ -60,15 +60,15 @@ coverY: 468.55958549222805
 
 Необходимы для фильтрации входящих данных начиная от событий с транзакциями и до событий сервисов. Благодаря фильтрам вы сможете ставить лимиты на обращения к вашей инфраструктуре в зависимости от ваших предпочтений, проводить фильтрацию по IP адресам(например не принимать транзакции если IP принадлежит к TOR exit-нодам). Довольно мощная штука-рекомендуем ознакомится
 
-### <mark style="color:red;"></mark>[<mark style="color:red;">Monitors</mark>](monitory.md)<mark style="color:red;"></mark>
+### <mark style="color:red;"></mark>[<mark style="color:red;">Monitors</mark>](page-1/monitory.md)<mark style="color:red;"></mark>
 
 Поскольку мы работаем в мультипространстве, то необходимо мониторить ситуацию в других симбиотах, хостчейнах таких как Ethereum,Solana,Tron,Bitcoin и так далее. Хорошо что у вас будет возможность посетить соответствующий репозиторий где члены сообщества и основная команда KlyntarTeam будут публиковать готовые решения которые будут вам необходимы для нормальной работы
 
-### <mark style="color:red;"></mark>[<mark style="color:red;">Adapters</mark>](adaptery.md)<mark style="color:red;"></mark>
+### <mark style="color:red;"></mark>[<mark style="color:red;">Adapters</mark>](page-1/adaptery.md)<mark style="color:red;"></mark>
 
 Поскольку данные будут поступать с разных источников, то целесообразно их преобразовывать в нужный для нод вашего кластера формат: где-то надо закэшировать данные или достать только нужное поле-с этим отлично справятся адаптеры
 
-### <mark style="color:red;"></mark>[<mark style="color:red;">Connectors</mark>](konnektory.md)<mark style="color:red;"></mark>
+### <mark style="color:red;"></mark>[<mark style="color:red;">Connectors</mark>](page-1/konnektory.md)<mark style="color:red;"></mark>
 
 Как вы уже смогли убедится,KLYNTAR очень гибкий и модульный с точки зрения архитектуры. Как вы сможете узнать дальше, <mark style="color:purple;">симбиоты</mark> и <mark style="color:purple;">хостчейны</mark>-это основа, я бы даже сказал БАЗА
 
