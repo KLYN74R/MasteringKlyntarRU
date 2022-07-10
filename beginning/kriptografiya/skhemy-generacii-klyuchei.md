@@ -29,7 +29,7 @@ Ed25519 был представлен в OpenSSH версии 6.5. Это реа
 }
 ```
 
-![](<../../.gitbook/assets/image (6) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1) (1) (1) (1).png>)
 
 <mark style="color:red;">**Node.js генерирует пару ключей в DER формате**</mark>
 
