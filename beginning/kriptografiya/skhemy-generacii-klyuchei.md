@@ -16,7 +16,7 @@ Ed25519 был представлен в OpenSSH версии 6.5. Это реа
 
 Кстати, KLYNTAR адреса совместимы с Solana(учитывая тот факт что их дефолтные адреса-это просто публичный ключ в Base58). Более того, транзакция коммита _<mark style="color:red;">**useful.txt**</mark>_ на мейнете Solana(с вызовом Memo программы) была произведена парой ключей KLYNTAR
 
-![Вы можете просмотреть транзакцию на официальном обозревателе Solana](<../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
+![Вы можете просмотреть транзакцию на официальном обозревателе Solana](<../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png>)
 
 {% embed url="https://explorer.solana.com/tx/36cs4bjKZJNcTsMA8N6Bz8mm2yBUX5WvcT74oT3Pn2sD6cMGprRQvmYVdPGQJmrnHPDrypJYkT9Zg6UHw4vuPssT" %}
 
