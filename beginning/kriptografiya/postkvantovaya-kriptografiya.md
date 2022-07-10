@@ -47,7 +47,7 @@ coverY: -28.739205526770295
 
 ### <mark style="color:red;">**Пары ключей / Подписи**</mark>
 
-![Группы постквантовых алгоритмов](<../../.gitbook/assets/image (7) (1).png>)
+![Группы постквантовых алгоритмов](<../../.gitbook/assets/image (7) (1) (1).png>)
 
 На начальных этапах мы решили использовать Dilithium и BLISS подписи. Среди остальных алгоритмов их соотношение безопасности и размеров публичных ключей + подписей показалось оптимальным. Они показывают хорошую скорость и могут брать участия в разного рода событиях на KLYNTAR. Мы рекомендуем использовать их как _<mark style="color:purple;">**адрес с повышенной безопасностью**</mark>_. Например, на них можно хранить большие суммы и пользоваться не часто или вообще через холодный кошелёк. _<mark style="color:purple;">****</mark>_&#x20;
 
@@ -55,9 +55,9 @@ _<mark style="color:purple;">**Dilithium**</mark>_
 
 ![](<../../.gitbook/assets/image (10).png>)
 
-
-
 Данный алгоритм является NIST кандидатом и предоставляет возможность генерировать пары ключей и подписи. Широко популярный, изучается на самых высоких уровнях. Он включён в постквантовую реализацию [_<mark style="color:yellow;">**OpenSSL**</mark>_](https://github.com/open-quantum-safe/openssl), изучается CloudFlare и входит в их репозиторий CIRCL
+
+![](../../.gitbook/assets/pasted-image-0--2--removebg-preview.png)
 
 {% embed url="https://github.com/cloudflare/circl" %}
 
@@ -67,19 +67,37 @@ _<mark style="color:purple;">**Dilithium**</mark>_
 
 ![](<../../.gitbook/assets/image (16).png>)
 
+Сами создатели рекомендуют использовать набор параметров Dilithium3, мы же используем Dilithium5 ввиду большей безопасности. Однако, для изменения уровня безопасности достаточно просто поменять одну строчку так что можно будет проводить такие изменения при необходимости.
 
+Так же оставляем вам ссылку на имплементацию API под Node.js в репозитории Cryptoland
+
+{% embed url="https://github.com/KLYN74R/Cryptoland/blob/main/dilithium.go" %}
+
+Ссылка на официальный сайт исследований
+
+{% embed url="https://pq-crystals.org/dilithium/index.shtml" %}
 
 _<mark style="color:purple;">**BLISS**</mark>_
 
-
+Вторым и приоритетным постквантовым алгоритмом подписи будет BLISS.
 
 {% embed url="https://bliss.di.ens.fr/" %}
 
 {% embed url="https://asecuritysite.com/signatures/go_bliss" %}
 
+### <mark style="color:red;">**Сравнение**</mark>
+
+![](<../../.gitbook/assets/image (17).png>)
+
 ### <mark style="color:red;">**Протоколы обмена ключами**</mark>
+
+<mark style="color:red;">****</mark>![](<../../.gitbook/assets/image (7).png>)<mark style="color:red;">****</mark>
 
 ### <mark style="color:red;">**Ассиметричное шифрование**</mark>
 
 
+
+### <mark style="color:red;">Дополнительные ссылки</mark>
+
+{% embed url="https://blog.cloudflare.com/nist-post-quantum-surprise/" %}
 
