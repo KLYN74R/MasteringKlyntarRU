@@ -64,7 +64,7 @@ _<mark style="color:red;">**Плагин на KLYNTAR**</mark>_ - это отд�
 
 Тут всё довольно просто. Плагины находятся в директории \
 \
-<mark style="color:orange;">**\<YOUR\_KLYNTAR\_DIRECTORY>/KLY\_Plugins**</mark>
+<mark style="color:orange;">**<**</mark><mark style="color:red;">**YOUR\_KLYNTAR\_DIRECTORY**</mark><mark style="color:orange;">**>/KLY\_Plugins**</mark>
 
 ```
 KlyntarCore
