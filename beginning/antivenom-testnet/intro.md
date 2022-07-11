@@ -123,40 +123,35 @@ pnpm run build
 
 #### **...и ещё кое-что**
 
-Insofar as KLYNTAR has many chains ( known as **symbiotes**) which symbiotically linked with the **hostchains** (Bitcoin,Ethereum,Avalanche,Solana,Dogecoin,XRP and other chains), we need **connectors** to allow symbiotes to interact with hostchains(e.g. reading contract state, getting blocks, write to hostchains and so on)
+Поскольку KLYNTAR имеет множество цепей (известных как _<mark style="color:red;">**симбиоты**</mark>_), которые симбиотически связаны с _<mark style="color:red;">**хостчейнами**</mark>_(Bitcoin, Ethereum, Avalanche, Solana, Dogecoin, XRP и другие цепочки), нам нужны _<mark style="color:red;">**коннекторы**</mark>_, чтобы позволить симбиотам взаимодействовать с хостчейнами(например, для чтения состояния контракта, получение блоков, запись в хостчейны и так далее)
 
-\
-\
-
+Вот какая ситуация с коннекторами для симбиотов сейчас
 
 *   #### **kNULL**
 
-    Our initial symbiote runned by KlyntarTeam will use [**dev0** ](https://github.com/KLYN74R/KlyntarCore/tree/main/KLY\_Hostchains/connectors/dev0)pack with connectors. The initial set of hostchains will become public soon.
+    Наш начальный симбиот который будет запущен командой KlyntarTeam будет использовать [**dev0** ](https://github.com/KLYN74R/KlyntarCore/tree/main/KLY\_Hostchains/connectors/dev0)пак с коннекторами. Начальный набор хостчейнов будет опубликован позже
 *   #### **AntiVenom**
 
-    The alias for testnet by default configuration(**ANTIVENOM/CONFIGS/symbiotes.json**) have disabled connection with the hostchains(or their testnets) but anyway, as far you can enable it, you should have installed dependecies for packs with connectors
+    Тестнет используя свою конфигурацию по умолчанию **ANTIVENOM/CONFIGS/symbiotes.json** и работая используя dev\_controller рабочий процесс имеет приостановленное состояние взаимодействия с хостчейнами(или их тестнетами), но в любом случае, вы можете их активировать. При этом не забудьте установить необходимые зависимости для коннекторов
 
-```js
+Итак, если вы хотите сделать коннекторы доступными активируйте их в конфигурации
 
-//Somewhere inside symbiotes.json
+```json
+//Где-то внутри symbiotes.json
+//Для активации смените на false
 
-   "STOP_HOSTCHAINS":{
-                
+"STOP_HOSTCHAINS":{
+        
         "ltc":true,
         "bsc":true,
         "eth":true
     
-    }
-
+}
 ```
 
-\
-
-
-Finally, go to dev0 directory and install node modules
+После активации, перейдите в директорию с набором коннекторов и запустите загрузку зависимостей
 
 ```shell
-
 # In KlyntarCore directory
 
 cd KLY_Hostchains/connectors/dev0
@@ -164,22 +159,17 @@ cd KLY_Hostchains/connectors/dev0
 pnpm install
 ```
 
-\
-\
+{% hint style="success" %}
+Мы предполагаем что вы выберете пак dev0**.** По крайней мере для запуска kNULL именно этот пак и понадобится
+{% endhint %}
+
+### &#x20;                              **🚀**<mark style="color:red;">**Отлично, теперь всё готово**</mark>**🚀**
 
 
-## 🚀Success,now your KLYNTAR is ready to start 🚀
 
-\
-\
+### ☄️<mark style="color:red;">Запуск</mark> <mark style="color:red;"></mark><mark style="color:red;">**тестнета**</mark>
 
-
-### ☄️ **Running AntiVenom(testnet)**
-
-\
-
-
-We assume that before to start some symbiote, you want to run at least local testnet to check how it works,to get used to the interface and so on. For this, you can instantly run AntiVenom locally. The testnet directory is **KlyntarCore/ANTIVENOM** and has the following structure:
+Каталог testnet называется KlyntarCore/ANTIVENOM и имеет следующую структуру:
 
 ```
 KlyntarCore
@@ -213,14 +203,19 @@ KlyntarCore
 │   └───SNAPSHOTS
 ```
 
-#### **Recomendation**
+Подобная структура будет общей для всех симбиотов и располагается на верхнем уровне выбранной директории.
 
-To run any symbiote you need two directories - **CONFIGS** and **GENESIS**. You can find them on our site or on sites/resources of someone who runs other symbiotes.Let's create a separate directory for our local testnet AntiVenom with the default values.
+Так как мы стремимся к максимальной абстракции, подобная структура будет независима от режима работы симбиота - независимо от консенсуса у всех есть генезис, у всех есть данные цепи, логи и так далее.&#x20;
+
+#### **Рекомендация**
+
+Для запуска любого симбиота(в том числе и тестнета) вам нужны 2 директории - **CONFIGS** and **GENESIS**. Вы сможете найти их на нашем сайте или на ресурсах той компании или сообщества что запускает симбиот. Давайте создадим отдельную директорию для нашего тестнета AntiVenom с конфигурацией по умолчанию.
 
 ```shell
 
 # In ~/KlyntarCore
 
+# Создаем директорию для нашего симбиота(тестнет в данном случае)
 mkdir -p ANTIVENOM_0
 
 cd ANTIVENOM
@@ -228,136 +223,60 @@ cd ANTIVENOM
 cp -r CONFIGS GENESIS ../ANTIVENOM_0
 ```
 
-Now, you can set some environment variables to set the path for this directory and other values. Find out more on our resources, but now we need only env for path
+Теперь нужно сохранить несколько переменных среды. Вскоре вы узнаете и про другие переменные среды, но сейчас нам нужны только две
 
 ```shell
-
+#Установка директории для запуска тестнета
 export SYMBIOTE_DIR=~/KlyntarCore/ANTIVENOM_0
 ```
 
-Now set mode
+И тестовый режим
 
 ```shell
-
 export KLY_MODE=test
 ```
 
-Finally run
+Теперь запустите демон
 
 ```shell
-
 klyntar
 ```
 
-### You should see the following
+### Вы должны будете увидеть следующее
 
-![](https://user-images.githubusercontent.com/53381472/174685058-ae9d42e3-c37c-483b-b462-2ec45230fca9.jpg)\
+![](https://user-images.githubusercontent.com/53381472/174685058-ae9d42e3-c37c-483b-b462-2ec45230fca9.jpg)
 
+Поскольку вы используете конфигурацию по умолчанию, то тут есть предустановленная пара ключей, режим работы(workflow) и т.д. Приватный ключ как говорилось ранее - зашифрован, а тут вы увидите запрос пароля. Пароль `qwerty`
 
-Since you are using default configuration, there is default keypair, workflow and so on. To continue decrypt your private key with the password `qwerty`
+#### Подсказка
 
-#### **Tip**
+Теперь у вас есть локально запущенный симбиот AntiVenom. Ваша нода пока что одна и работает по умолчанию в режиме контроллера для workflow dev\_controller. Вскоре мы покажем как добавлять других участников и улучшать вашу сеть добавляя новые фичи!
 
-Now you have locally runned symbiote AntiVenom. Your node is a single one and works as **Controller** for **dev\_controller** workflow. Soon we'll show who to make your network more advanced by adding **InstantGenerators**, changing workflows, make your network semi-public, join your symbiote to external AntiVenom testnets, make your AntiVenom network in TOR network(via hidden services) and other cool features!
+### <mark style="color:red;">KLYNTAR - ваш провайдер в мир новых блокчейнов</mark>
 
-\
+#### Совет
 
+Ищите больше информации на наших ресурсах
 
-### KLYNTAR - your provider to new generation of crypto projects
-
-#### **Advice**
-
-Find out more about advanced options,configs,flags and so on our resources
-
-\
-\
+### &#x20;                  🔥<mark style="color:red;">Поздравляем, теперь вы часть KLYNTAR</mark>🔥
 
 
-### 🧬 **Running kNULL**
 
-The installation process for symbiotes are the same as for testnet, but you should firstly modify configs and generate keypair. Then, open another terminal and create a separate dir
+### ⚙️ <mark style="color:red;"></mark> <mark style="color:red;"></mark><mark style="color:red;">**Итог**</mark>
 
-```shell
+KLYNTAR может буквально все. Описанное здесь составляет менее 0,001% от потенциала. Вскоре вы узнаете о других функциях, таких как:
 
-mkdir ~/KlyntarCore/kNULL
-```
+* Взаимодействие с хостчейнами, симбиотами(мутуализм)
+* Как запускать кластеры
+* Как менять workflow
+* Как участвовать в социальном консенсусе путём голосования
+* Как протестировать Unobtanium - ваши объединённые ресурсы из всех цепочек типа смайненные Bitcoin блоки, замороженные ставки на Polygon, майнинг на Helium и так далее
 
-Then, discover manifest for your symbiote(in this case kNULL) and paste to `symbiotes.json`. Load manifest [here](https://github.com/KLYN74R/SymbiotesManifests/kNULL.json). Also,load GENESIS [here](https://klyntar.org/manifests/kNULL.json).
+### 🤓 <mark style="color:red;">**Совет**</mark>
 
-```shell
-
-export SYMBIOTE_DIR=~/KlyntarCore/kNULL
-```
-
-Now run
-
-```shell
-
-klyntar
-```
-
-\
-\
-
-
-## 🔥Cool,now you are the part of KLYNTAR🔥
-
-### The part of family
-
-#### The part of hivemind
-
-\
-\
-
-
-### ⚙️ **Summary**
-
-\
-
-
-KLYNTAR can do literally everything. Described here is less than 0.001% of potential. Soon you'll get to know about another features like:
-
-* Interactions with the hostchains, services, mutualism
-* How to make your AntiVenom more advanced by making it semi-public, by adding tons of plugins and so on
-* How to use Cryptoland with cool crypto features like VRF, multi & threshold & linkable ring signatures, post quantum cryptography and so on
-* How to run clusters
-* How to create workflows and this way-change the consensus
-* How to take part in social consensus & voting
-* How to use Unobtanium - your united resources from other blockchains e.g. bitcoin mined blocks, frozen stakes on Polygon, miner on Helium and so on
-
-\
-\
-
-
-## **It's just beginning**
-
-\
-\
-
-
-### 🤓 **Advice**
-
-\
-
-
-Follow us to get the news & updates ASAP. Discuss, share ideas, advices, help newbies to make our community more powerful.We're happy to involve new members to KLY community 😊
-
+Следите за нами, чтобы получать новости и обновления как можно скорее. Обсуждайте, делитесь идеями, советами, помогайте новичкам сделать наше сообщество сильнее. Мы рады привлечь новых участников в сообщество KLY 😊\
 \
 [![](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge\&logo=reddit\&logoColor=white) ](https://www.reddit.com/r/KLYN74R/)[![](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge\&logo=twitter\&logoColor=white) ](https://twitter.com/KLYN74R)[![](https://img.shields.io/badge/Medium-12100E?style=for-the-badge\&logo=medium\&logoColor=white) ](https://klyntar.medium.com/)[![](https://img.shields.io/badge/TikTok-000000?style=for-the-badge\&logo=tiktok\&logoColor=white)](https://www.tiktok.com/@klyn74r)\
 [![](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge\&logo=instagram\&logoColor=white) ](https://www.instagram.com/klyn74r/)[![](https://img.shields.io/badge/Pinterest-%23E60023.svg?\&style=for-the-badge\&logo=Pinterest\&logoColor=white) ](https://www.pinterest.com/klyn74r)[![](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge\&logo=devdotto\&logoColor=white) ](https://dev.to/klyntar)[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/KLYN74R)\
 [![](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge\&logo=telegram\&logoColor=white) ](https://t.me/KLYN74R)[![](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge\&logo=discord\&logoColor=white) ](https://discord.gg/f7e7fCp97r)[![](https://img.shields.io/badge/Tor%20site-330F63?style=for-the-badge\&logoColor=white) ](http://klyntar66kjwhyirucco6sjgyp2f7lfznelzgpjcp6oha2olzb4rlead.onion)[![](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge\&logo=youtube\&logoColor=white)](https://www.youtube.com/channel/UC3TiyK40an6rQlf3BarMDoQ)\
 [![](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge\&logo=facebook\&logoColor=white) ](https://www.facebook.com/KLYN74R/)[![](https://img.shields.io/badge/GitLab-330F63?style=for-the-badge\&logo=gitlab\&logoColor=white) ](https://gitlab.com/KLYNTAR)[![](https://img.shields.io/badge/Tumblr-%2336465D.svg?\&style=for-the-badge\&logo=Tumblr\&logoColor=white) ](https://klyn74r.tumblr.com/)![](https://img.shields.io/badge/Stack\_Overflow-FE7A16?style=for-the-badge\&logo=stack-overflow\&logoColor=white)
-
-\
-\
-
-
-### 📚**Docs**
-
-Read the docs here to find out more. For example, how to use plugins, prepare & change configs, run on a host machine, how to start a KLY Service and so on!
-
-\
-
-
-[🇬🇧 ![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://mastering.klyntar.org)\
-[🇷🇺 ![](https://img.shields.io/badge/Gitbook-000000?style=for-the-badge\&logo=gitbook\&logoColor=white)](https://ru.mastering.klyntar.org)
