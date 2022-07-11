@@ -7,7 +7,6 @@
 
 * [🎯 Мотивация](beginning/motivaciya.md)
 * [👁 Первый взгляд](beginning/pervyi-vzglyad.md)
-* [🧠 Горе от ума](beginning/gore-ot-uma.md)
 * [🏗 Архитектура](beginning/architecture/README.md)
   * [☕ В общем](beginning/architecture/v-obshem.md)
   * [👽 Симбиоты](beginning/architecture/simbioty.md)
@@ -82,3 +81,4 @@
 * [🍕 Контрибуторам](beginning/kontributoram.md)
 * [👮 Базовая безопасность](beginning/bazovaya-bezopasnost.md)
 * [🇸🇴 Социальные сети & Ссылки](beginning/socialnye-seti-and-ssylki.md)
+* [🧠 Горе от ума](beginning/gore-ot-uma.md)
