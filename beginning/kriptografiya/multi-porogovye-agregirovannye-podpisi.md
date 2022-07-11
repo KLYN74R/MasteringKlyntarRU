@@ -91,7 +91,11 @@ $$
 Доказательство
 
 $$
-e(G, S) = e(G, (pk1+pk2+pk3)×H(m)) = e((pk1+pk2+pk3)×G, H( m)) = e(P1+P2+P3, H(m)) = e(P, H(m))
+e(G, S) = e(G, (pk1+pk2+pk3)×H(m))
+$$
+
+$$
+e((pk1+pk2+pk3)×G, H( m)) = e(P1+P2+P3, H(m)) = e(P, H(m))
 $$
 
 ![https://asecuritysite.com/signatures/js\_bls](<../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)

@@ -123,35 +123,40 @@ pnpm run build
 
 #### **...и ещё кое-что**
 
-Поскольку KLYNTAR имеет множество цепей (известных как _<mark style="color:red;">**симбиоты**</mark>_), которые симбиотически связаны с _<mark style="color:red;">**хостчейнами**</mark>_(Bitcoin, Ethereum, Avalanche, Solana, Dogecoin, XRP и другие цепочки), нам нужны _<mark style="color:red;">**коннекторы**</mark>_, чтобы позволить симбиотам взаимодействовать с хостчейнами(например, для чтения состояния контракта, получение блоков, запись в хостчейны и так далее)
+Insofar as KLYNTAR has many chains ( known as **symbiotes**) which symbiotically linked with the **hostchains** (Bitcoin,Ethereum,Avalanche,Solana,Dogecoin,XRP and other chains), we need **connectors** to allow symbiotes to interact with hostchains(e.g. reading contract state, getting blocks, write to hostchains and so on)
 
-Вот какая ситуация с коннекторами для симбиотов сейчас
+\
+\
+
 
 *   #### **kNULL**
 
-    Наш начальный симбиот который будет запущен командой KlyntarTeam будет использовать [**dev0** ](https://github.com/KLYN74R/KlyntarCore/tree/main/KLY\_Hostchains/connectors/dev0)пак с коннекторами. Начальный набор хостчейнов будет опубликован позже
+    Our initial symbiote runned by KlyntarTeam will use [**dev0** ](https://github.com/KLYN74R/KlyntarCore/tree/main/KLY\_Hostchains/connectors/dev0)pack with connectors. The initial set of hostchains will become public soon.
 *   #### **AntiVenom**
 
-    Тестнет используя свою конфигурацию по умолчанию **ANTIVENOM/CONFIGS/symbiotes.json** и работая используя dev\_controller рабочий процесс имеет приостановленное состояние взаимодействия с хостчейнами(или их тестнетами), но в любом случае, вы можете их активировать. При этом не забудьте установить необходимые зависимости для коннекторов
+    The alias for testnet by default configuration(**ANTIVENOM/CONFIGS/symbiotes.json**) have disabled connection with the hostchains(or their testnets) but anyway, as far you can enable it, you should have installed dependecies for packs with connectors
 
-Итак, если вы хотите сделать коннекторы доступными активируйте их в конфигурации
+```js
 
-```json
-//Где-то внутри symbiotes.json
-//Для активации смените на false
+//Somewhere inside symbiotes.json
 
-"STOP_HOSTCHAINS":{
-        
+   "STOP_HOSTCHAINS":{
+                
         "ltc":true,
         "bsc":true,
         "eth":true
     
-}
+    }
+
 ```
 
-После активации, перейдите в директорию с набором коннекторов и запустите загрузку зависимостей
+\
+
+
+Finally, go to dev0 directory and install node modules
 
 ```shell
+
 # In KlyntarCore directory
 
 cd KLY_Hostchains/connectors/dev0
@@ -159,17 +164,22 @@ cd KLY_Hostchains/connectors/dev0
 pnpm install
 ```
 
-{% hint style="success" %}
-Мы предполагаем что вы выберете пак dev0**.** По крайней мере для запуска kNULL именно этот пак и понадобится
-{% endhint %}
-
-### &#x20;                              **🚀Отлично, теперь всё готово🚀**
+\
+\
 
 
+## 🚀Success,now your KLYNTAR is ready to start 🚀
 
-### ☄️Запуск **тестнета**
+\
+\
 
-Каталог testnet называется KlyntarCore/ANTIVENOM и имеет следующую структуру:
+
+### ☄️ **Running AntiVenom(testnet)**
+
+\
+
+
+We assume that before to start some symbiote, you want to run at least local testnet to check how it works,to get used to the interface and so on. For this, you can instantly run AntiVenom locally. The testnet directory is **KlyntarCore/ANTIVENOM** and has the following structure:
 
 ```
 KlyntarCore
@@ -203,15 +213,14 @@ KlyntarCore
 │   └───SNAPSHOTS
 ```
 
-#### **Рекомендация**
+#### **Recomendation**
 
-Для запуска любого симбиота(в том числе и тестнета) вам нужны 2 директории - **CONFIGS** and **GENESIS**. Вы сможете найти их на нашем сайте или на ресурсах той компании или сообщества что запускает симбиот. Давайте создадим отдельную директорию для нашего тестнета AntiVenom с конфигурацией по умолчанию.
+To run any symbiote you need two directories - **CONFIGS** and **GENESIS**. You can find them on our site or on sites/resources of someone who runs other symbiotes.Let's create a separate directory for our local testnet AntiVenom with the default values.
 
 ```shell
 
 # In ~/KlyntarCore
 
-# Создаем директорию для нашего симбиота(тестнет в данном случае)
 mkdir -p ANTIVENOM_0
 
 cd ANTIVENOM
@@ -219,32 +228,35 @@ cd ANTIVENOM
 cp -r CONFIGS GENESIS ../ANTIVENOM_0
 ```
 
-Теперь нужно сохранить несколько переменных среды. Вскоре вы узнаете и про другие переменные среды, но сейчас нам нужны только две
+Now, you can set some environment variables to set the path for this directory and other values. Find out more on our resources, but now we need only env for path
 
 ```shell
-#Установка директории для запуска тестнета
+
 export SYMBIOTE_DIR=~/KlyntarCore/ANTIVENOM_0
 ```
 
-И тестовый режим
+Now set mode
 
 ```shell
+
 export KLY_MODE=test
 ```
 
-Теперь запустите демон
+Finally run
 
 ```shell
+
 klyntar
 ```
 
-### Вы должны будете увидеть следующее
+### You should see the following
 
-![](https://user-images.githubusercontent.com/53381472/174685058-ae9d42e3-c37c-483b-b462-2ec45230fca9.jpg)
+![](https://user-images.githubusercontent.com/53381472/174685058-ae9d42e3-c37c-483b-b462-2ec45230fca9.jpg)\
 
-Поскольку вы используете конфигурацию по умолчанию, то тут есть предустановленная пара ключей, режим работы(workflow) и т.д. Приватный ключ как говорилось ранее - зашифрован, а тут вы увидите запрос пароля. Пароль `qwerty`
 
-#### Подсказка
+Since you are using default configuration, there is default keypair, workflow and so on. To continue decrypt your private key with the password `qwerty`
+
+#### **Tip**
 
 Now you have locally runned symbiote AntiVenom. Your node is a single one and works as **Controller** for **dev\_controller** workflow. Soon we'll show who to make your network more advanced by adding **InstantGenerators**, changing workflows, make your network semi-public, join your symbiote to external AntiVenom testnets, make your AntiVenom network in TOR network(via hidden services) and other cool features!
 
@@ -257,15 +269,51 @@ Now you have locally runned symbiote AntiVenom. Your node is a single one and wo
 
 Find out more about advanced options,configs,flags and so on our resources
 
+\
+\
 
 
-### &#x20;                      🔥Cool,now you are the part of KLYNTAR🔥
+### 🧬 **Running kNULL**
+
+The installation process for symbiotes are the same as for testnet, but you should firstly modify configs and generate keypair. Then, open another terminal and create a separate dir
+
+```shell
+
+mkdir ~/KlyntarCore/kNULL
+```
+
+Then, discover manifest for your symbiote(in this case kNULL) and paste to `symbiotes.json`. Load manifest [here](https://github.com/KLYN74R/SymbiotesManifests/kNULL.json). Also,load GENESIS [here](https://klyntar.org/manifests/kNULL.json).
+
+```shell
+
+export SYMBIOTE_DIR=~/KlyntarCore/kNULL
+```
+
+Now run
+
+```shell
+
+klyntar
+```
+
+\
+\
 
 
+## 🔥Cool,now you are the part of KLYNTAR🔥
 
-### ⚙️ **Итог**
+### The part of family
 
-****
+#### The part of hivemind
+
+\
+\
+
+
+### ⚙️ **Summary**
+
+\
+
 
 KLYNTAR can do literally everything. Described here is less than 0.001% of potential. Soon you'll get to know about another features like:
 
