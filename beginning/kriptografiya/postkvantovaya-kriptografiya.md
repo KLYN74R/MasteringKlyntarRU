@@ -47,7 +47,7 @@ coverY: -28.739205526770295
 
 ### <mark style="color:red;">**Пары ключей / Подписи**</mark>
 
-![Группы постквантовых алгоритмов](<../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
+![Группы постквантовых алгоритмов](<../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png>)
 
 На начальных этапах мы решили использовать Dilithium и BLISS подписи. Среди остальных алгоритмов их соотношение безопасности и размеров публичных ключей + подписей показалось оптимальным. Они показывают хорошую скорость и могут брать участия в разного рода событиях на KLYNTAR. Мы рекомендуем использовать их как _<mark style="color:purple;">**адрес с повышенной безопасностью**</mark>_. Например, на них можно хранить большие суммы и пользоваться не часто или вообще через холодный кошелёк. _<mark style="color:purple;">****</mark>_&#x20;
 
@@ -95,7 +95,7 @@ _<mark style="color:purple;">**BLISS**</mark>_
 
 Вы уже можете сгенерировать BLISS пару ключей и адрес. Адресом является BLAKE3 хэш от публичного ключа
 
-![](<../../.gitbook/assets/image (15) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1).png>)
 
 {% embed url="https://bliss.di.ens.fr/" %}
 
@@ -107,7 +107,7 @@ _<mark style="color:purple;">**BLISS**</mark>_
 В таблице отсутствуют некоторые наши алгоритмы
 {% endhint %}
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 ### <mark style="color:red;">**Протоколы обмена ключами**</mark>
 
@@ -129,7 +129,7 @@ _<mark style="color:purple;">**BLISS**</mark>_
 
 ![https://blog.cloudflare.com/nist-post-quantum-surprise/](<../../.gitbook/assets/image (6).png>)
 
-![](<../../.gitbook/assets/image (7) (1) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1) (1).png>)
 
 {% embed url="https://pq-crystals.org/kyber/index.shtml" %}
 Официальная страница

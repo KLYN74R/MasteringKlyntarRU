@@ -6,7 +6,7 @@ coverY: 0
 
 # 🛑 Фильтры
 
-![](<../.gitbook/assets/image (7) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
 
 ### <mark style="color:red;">**В целом**</mark>
 
