@@ -29,11 +29,15 @@ coverY: 0
 
 <mark style="color:orange;">**ALGO**</mark> - DSQGU336BYG3POR6G6YKLQROU3KLLZYSSHAP7LSYBSUWC7ZG6LMG5W7DJI
 
+<mark style="color:orange;">**XRP**</mark> - rnkjFGZseo8PzGDPxcWZBnBx6XAKmmqowL
 
+<mark style="color:orange;">**XLM**</mark> - GDC322H7RGO3UCOSW5HCPH4YFJFOSXJD6TDHGRQLJKUGZIG4OXAJFIH5
 
+{% hint style="info" %}
+Кстати, все наши адреса сгенерированы с помощью ValarDohaeris. Вы также можете использовать репозиторий в своих проектах.
+{% endhint %}
 
-
-
+{% embed url="https://github.com/KLYN74R/ValarDohaeris" %}
 
 ### <mark style="color:red;">Социальные сети</mark>
 
