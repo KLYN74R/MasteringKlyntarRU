@@ -33,6 +33,14 @@ coverY: 0
 
 <mark style="color:orange;">**XLM**</mark> - GDC322H7RGO3UCOSW5HCPH4YFJFOSXJD6TDHGRQLJKUGZIG4OXAJFIH5
 
+<mark style="color:orange;">**TON**</mark> - EQAnhIKJwatZ8F\_8d9Meqym1erWmjlxPyigplKmAbUKR0cAB
+
+<mark style="color:orange;">**ATOM**</mark> - cosmos17sqzjefls3hxgmzr9r2lepvmckf6swcknnl563
+
+<mark style="color:orange;">**LUNA**</mark> - terra1l8uzj3sfs6re9ss8wykn3phjv7z3wcp3r47qcq
+
+
+
 {% hint style="info" %}
 Кстати, все наши адреса сгенерированы с помощью ValarDohaeris. Вы также можете использовать репозиторий в своих проектах.
 {% endhint %}
