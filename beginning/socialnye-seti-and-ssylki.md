@@ -39,10 +39,14 @@ coverY: 0
 
 <mark style="color:orange;">**LUNA**</mark> - terra1l8uzj3sfs6re9ss8wykn3phjv7z3wcp3r47qcq
 
+<mark style="color:orange;">**KSM**</mark> - FSWVQfX5XL7EtfmKCedKNS59oVdc96ic2nk1jFCWfMt4XBD
+
+<mark style="color:orange;">**DOT**</mark> - 13sByRaiJwaevmrqW8taZZuDrqD3VmqgE9gUnMxbaxAuVrBy
+
 
 
 {% hint style="info" %}
-Кстати, все наши адреса сгенерированы с помощью ValarDohaeris. Вы также можете использовать репозиторий в своих проектах.
+Кстати, почти все(потому что мы ещё не всё добавили) наши адреса сгенерированы с помощью ValarDohaeris. Вы также можете использовать репозиторий в своих проектах.
 {% endhint %}
 
 {% embed url="https://github.com/KLYN74R/ValarDohaeris" %}
