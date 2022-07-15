@@ -7,6 +7,8 @@ coverY: 0
 
 ### <mark style="color:red;">Что считать хостчейном?</mark>
 
+Хостчейн -&#x20;
+
 ### <mark style="color:red;">**Рациональность**</mark>
 
 ### <mark style="color:red;">Hivemind</mark>
