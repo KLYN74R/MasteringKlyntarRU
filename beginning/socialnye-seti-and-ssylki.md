@@ -43,6 +43,12 @@ coverY: 0
 
 <mark style="color:orange;">**DOT**</mark> - 13sByRaiJwaevmrqW8taZZuDrqD3VmqgE9gUnMxbaxAuVrBy
 
+<mark style="color:orange;">**HNT**</mark> - 14ixJ8Jc9xzfZtN4psTJ3BiGr9QduJK8EeZTMDR9ZtkWTKNhoxV
+
+<mark style="color:orange;">**ZCash**</mark> - t1ZLSvPXoiswAVvzAJALFQdka4oSupgHC4V
+
+<mark style="color:orange;">**Monero**</mark> - 46dytBPWaJaD83KShYHiTRZPTm6TdrmzYFYt6rVNcTYUMBzoLziL9Ay76AFNeZgoonAqf72EE734F9EoCV9Y6zs49hv2GG7
+
 
 
 {% hint style="info" %}
