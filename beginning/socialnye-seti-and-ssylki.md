@@ -17,7 +17,21 @@ coverY: 0
 Благодаря криптографии мы сможем с вами связаться👻. Так к примеру если вы поддержите проект например 100$, то мы с вами свяжемся и отправим наш мерч. Мы объявим об этом событии, а вы подпишите своим приватным ключом вашу почту или другой способ связи. Мы проверим что с этого адреса поступал донат и отблагодарим вас)
 {% endhint %}
 
-Адреса:
+<mark style="color:yellow;">**Адреса:**</mark>
+
+<mark style="color:orange;">**BTC**</mark> - bc1qkuce4tftqnpc3m0k20wy8lxze843c8qqms2kr9
+
+<mark style="color:orange;">**EVM chains(ETH,AVAX,MATIC,BNB,etc.)**</mark> - 0x5E90833Bd09f9A9ccA4f1190cB92559e8A1E18aE
+
+<mark style="color:orange;">**ADA**</mark> - addr1q9l8wws4qy97dt284pjqwz3fm7cdl6l8twegj7nymupy0ct7wuap2qgtu6k502ryqu9znhasml47wkaj39axfhczglssj2s078\
+\
+<mark style="color:orange;">**SOL**</mark> - DmdF9SNUqJEyKBT6Quyj7rbAuYnR2jCKhqSndd53Y1jN
+
+<mark style="color:orange;">**ALGO**</mark> - DSQGU336BYG3POR6G6YKLQROU3KLLZYSSHAP7LSYBSUWC7ZG6LMG5W7DJI
+
+
+
+
 
 
 
