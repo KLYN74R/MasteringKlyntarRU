@@ -6,3 +6,8 @@ coverY: 0
 
 # 🌪 Ragnarök
 
+### <mark style="color:red;">**Coming soon**</mark> 👻
+
+Будет опубликовано со временем
+
+![](<../../.gitbook/assets/unnamed (2)-photoaidcom-invertphotoAid-removed-background.png>)
