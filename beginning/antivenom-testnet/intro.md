@@ -32,20 +32,19 @@ Docker version 20.10.14, build a224086
 
 #### <mark style="color:yellow;">**Загрузка образа**</mark>
 
-Мы представляем вам наш первый образ [klyntar/all\_in\_one](https://hub.docker.com/repository/docker/klyntar/all\_in\_one).
+Мы представляем вам наш первый образ [_<mark style="color:red;">**klyntar/all\_in\_one**</mark>_](https://hub.docker.com/repository/docker/klyntar/all\_in\_one).
 
 \
 ![](http://dockeri.co/image/klyntar/all\_in\_one)\
 
 
-Это универсальный образ с предустановленными Node.js, Go , Python и некоторыми другими инструментами типа `pnpm` , `node-gyp`, `git` и так далее. Это базовый слой для наших остальных Dockerfile(по крайней мере для ядра и Apollo). Приблезительный сжатый размер 606 мегабайт.
+Это универсальный образ с предустановленными Node.js, Go , Python и некоторыми другими инструментами типа `pnpm` , `node-gyp`, `git` и так далее. Это базовый слой для наших остальных Dockerfile(по крайней мере для ядра и Apollo). Приблизительный сжатый размер 606 мегабайт.
 
 Так же в репозитории [_<mark style="color:red;">**KlyntarBaseImages**</mark>_](https://github.com/KLYN74R/KlyntarBaseImage) вы сможете найти исходники наших образов с их Dockerfile и скриптами для билда. Вы можете их клонировать и сбилдить образ локально или же просмотреть bash скрипт билда и пройтись по его командам для  установки всего необходимого на вашу хост-машину. Но в любом случае, мы бы рекомендовали использовать контейнеры
 
 ![](https://user-images.githubusercontent.com/53381472/174490998-2041af0d-6cd5-4873-ad64-fa810cda02df.jpg)
 
 ```shell
-
 docker pull klyntar/all_in_one@sha256:dff001a9cd3da6328c504b52ed8a5748c47d23219feae220930dac1c1981cfe7
 ```
 
@@ -87,7 +86,6 @@ cd ~
 Склонируйте репозиторий KlyntarCore
 
 ```shell
-
 git clone https://github.com/KLYN74R/KlyntarCore.git
 
 cd KlyntarCore
@@ -96,7 +94,6 @@ cd KlyntarCore
 И наконец, запустите 1 команду для билда
 
 ```shell
-
 pnpm run build
 ```
 
