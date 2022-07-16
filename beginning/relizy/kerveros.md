@@ -6,11 +6,11 @@ coverY: -14.730601569311247
 
 # 👹 Κέρβερος
 
-![](https://lh5.googleusercontent.com/3Cu1A9i6JACPILoLgQTSPoRZBJK7yE5owhWfyBNNUzAUt5GyTvy42JWzd5F7RGJLlaq1xxF\_lZEL8vKJyljY6jFwYH4cetgnGiCiSLW9FCdmh8fNt6QhadZ1-kz6\_4QChDDC2HsQkc7ktzfjag)
-
 {% hint style="success" %}
-Реализовано
+Статус - <mark style="color:purple;">**Реализовано**</mark>
 {% endhint %}
+
+![](https://lh5.googleusercontent.com/3Cu1A9i6JACPILoLgQTSPoRZBJK7yE5owhWfyBNNUzAUt5GyTvy42JWzd5F7RGJLlaq1xxF\_lZEL8vKJyljY6jFwYH4cetgnGiCiSLW9FCdmh8fNt6QhadZ1-kz6\_4QChDDC2HsQkc7ktzfjag)
 
 В первом документе KLYNTAR ([_<mark style="color:red;">**Whitepaper v1**</mark>_](https://github.com/KLYN74R/Whitepapers)) мы обещали добавления только постквантовых подписей на основе хэшей.
 
