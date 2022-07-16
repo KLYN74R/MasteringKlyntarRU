@@ -7,7 +7,7 @@ coverY: -174.8561464690497
 # 🐲 Mutualism
 
 {% hint style="warning" %}
-Статус: <mark style="color:purple;">**Планирование и проработка**</mark>
+Статус - <mark style="color:purple;">**Планирование и проработка**</mark>
 {% endhint %}
 
 ![](../../.gitbook/assets/mutualismphotoAid-removed-background.png)

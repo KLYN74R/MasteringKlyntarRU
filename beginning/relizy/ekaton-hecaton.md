@@ -7,7 +7,7 @@ coverY: 0
 # 👐 Εκατόν(Hecaton)
 
 {% hint style="warning" %}
-Статус: <mark style="color:purple;">**Планирование и разработка**</mark>
+Статус - <mark style="color:purple;">**Планирование и разработка**</mark>
 {% endhint %}
 
 ![](https://lh6.googleusercontent.com/6IXx-jg0ur\_vbtBA0mMwGcJEzFL4sAS1\_e8A33Sn8APom29XYNNVzHZPQ-vV5BfV4v\_nK0j-U6-wUu42EgvB7UFytoGG1Q9Vq5ugpq7msVmcDA5WSRmDXBoUaJVLss8-v1ZZ9IlO\_GZMZPvEkg)
