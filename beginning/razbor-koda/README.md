@@ -24,6 +24,12 @@ coverY: -200.6217616580311
 Для разработок и внесения изменений в код мы рекомендуем ещё раз клонировать репозиторий в отдельную директорию вместо изменений в том, который запускает рабочую версию ядра.
 {% endhint %}
 
+### <mark style="color:red;">**Подготовка к разбору**</mark>
+
+Для дальнейшего чтения и разбора рекомендуем открыть репозиторий ядра KLYNTAR и вместе с этим руководством постепенно разбираться что к чему
+
+{% embed url="https://github.com/KLYN74R/KlyntarCore" %}
+
 ### <mark style="color:yellow;">**Дерево директорий**</mark>
 
 Прежде чем начинать разбираться с кодом, стоит обратить внимание на структуру директорий ядра. Она имеет следующий вид
@@ -35,15 +41,9 @@ coverY: -200.6217616580311
 ```
 |-- ANTIVENOM
 |
-|-- GENESIS
-|
 |-- KLY_Addons
 |
-|-- KLY_Blocks
-|
 |-- KLY_Doppelgangers
-|
-|-- KLY_Essences
 |
 |-- KLY_ExternalServices
 |
@@ -59,9 +59,11 @@ coverY: -200.6217616580311
 |
 |-- KLY_Utils
 |
+|-- KLY_WASM
+|
 |-- KLY_Workflows
 |
-|-- CONFIGS
+|-- MAINNET
 ```
 
 <mark style="color:yellow;">**AntiVenom**</mark>
@@ -81,12 +83,10 @@ ANTIVENOM
 |       `-- STATE
 |
 |-- CONFIGS
-|   |-- doppelgangers.json
 |   |-- network.json
 |   |-- node.json
 |   |-- services.json
-|   |-- symbiotes.json
-|   `-- tracking.json
+|   `-- symbiotes.json
 |
 |-- GENESIS
 |   `-- FASj1powx5qF1J6MRmx1PB7NQp5mENYEukhyfaWoqzL9
@@ -111,10 +111,127 @@ ANTIVENOM
 \
 <mark style="color:purple;">**SNAPSHOTS**</mark> - содержит поддиректории METADATA и STATE. METADATA хранит указатели на текущий блок снепшота(высоту), его хэш, канарейку и другие данные. STATE представляет собой данные состояния в чистом виде
 
-
-
 {% hint style="info" %}
 Вы могли заметить промежуточную директорию \
 \
 <mark style="color:orange;">**FASj1powx5qF1J6MRmx1PB7NQp5mENYEukhyfaWoqzL9**</mark>\ <mark style="color:orange;">****</mark>\ <mark style="color:orange;">****</mark>Это адрес который создал данного симбиота и ID симбиота(подобно адресу смарт-контракта в EVM-совместимых цепях). При работе с другими цепочками у вас будут другие адреса. Так же это "ненужная" директория ввиду того, что сначала планировался другой дизайн и размещение директорий. В будущем мы исправим это
 {% endhint %}
+
+<mark style="color:yellow;">**KLY\_Addons**</mark>
+
+Директория с разного рода кодом на других языках. Тут лежат исходники на Go, Rust и C++ которые требуют определённых манипуляций таких как компиляция в библиотеку и преобразование в аддоны. Так достаточно будет перейти в 1 директорию и запустить билд. Находится на верхнем уровне ядра так как содержит в основном алгоритмы которые будут общими для разных рабочих процессов.
+
+<mark style="color:yellow;">**KLY\_Doppelgangers**</mark>
+
+Предназначена для будущих релизов
+
+<mark style="color:yellow;">**KLY\_ExternalServices**</mark>
+
+Директория которая содержит все сторонние сервисы которые загружает ваш раннер. Является что-то типа общим хранилищем со следующей структурой
+
+```
+KLY_ExternalServices
+|
+|-- SomeOneService
+|-- AnotherService
+|-- Lokapala@1.3.37
+|-- ...
+`-- OneMoreService
+```
+
+Каждая директория здесь - это отдельный репозиторий с сервисом который запускается в вашей инфраструктуре.
+
+<mark style="color:yellow;">**KLY\_Hostchains**</mark>
+
+Большая и критически важная директория которая имеет такую структуру
+
+```
+KLY_Hostchains
+│
+│   
+└───adapters
+│   │   
+│   │   README.md
+│   │   
+│   └───custom_MY_OWN_COLLECTION(kind of root directory for this pack)
+│   │    │   
+│   │    │───Solana(all files together)
+│   │    │   └───configs.json
+│   │    │   └───server.js
+│   │    │   └───routes.js
+│   │    │   └───...
+│   │    │
+│   │    │───XRP   
+│   │    │   └───listener.rs(use different languages)
+│   │    │   └───bot.js
+│   │    │   └───Cargo.toml
+│   │    │   └───...
+│   │    │ 
+│   │    │───RSK
+│   │         └───...
+│   │
+│   └───dev0(developers' examples of adapters)
+│        └───...
+│
+└───connectors
+│   │ 
+│   │  README.md
+│   │   
+│   └───dev0
+│   │    │   
+│   │    │───Solana(all files together)
+│   │    │   └───configs.json
+│   │    │   └───server.js
+│   │    │   └───routes.js
+│   │    │   └───...
+│   │    │
+│   │    │───XRP   
+│   │    │   └───listener.rs(use different languages)
+│   │    │   └───bot.js
+│   │    │   └───Cargo.toml
+│   │    │   └───...
+│   │    │ 
+│   │    │───RSK
+│   │         └───...
+│   │
+│   └───dev0(developers' examples of adapters)
+│        └───...
+```
+
+<mark style="color:yellow;">**KLY\_Plugins**</mark>
+
+Содержит плагины которые загружаются оператором узла отдельно и служат для расширения возможностей ядра, рабочих процессов и так далее. Подробней о плагинах [_<mark style="color:red;">**здесь**</mark>_](../plaginy.md)_<mark style="color:red;">****</mark>_
+
+<mark style="color:yellow;">**KLY\_Runners**</mark>
+
+Содержит код раннеров которые прослушивают новые сервисы и запускают дальнейшую логику на основе конфигурации - что запускать, а что нет, в каком контейнере, какой скрипт выполнить и так далее. Там же будет находится дефолтный раннер от разработчиков Andromeda. Вы можете это увидеть взглянув на репозиторий
+
+![](<../../.gitbook/assets/image (16).png>)
+
+{% hint style="warning" %}
+Не забывайте, что процесс разработки продолжается
+{% endhint %}
+
+<mark style="color:yellow;">**KLY\_Services**</mark>
+
+Хранилище ваших сервисов. Структура аналогичная KLY\_ExternalServices за тем исключением, что сервисы здесь - разработанные вами
+
+<mark style="color:yellow;">**KLY\_Tests**</mark>
+
+Директория с отдельными unit и другими тестами
+
+<mark style="color:yellow;">**KLY\_Utils**</mark>
+
+Содержит алгоритмы и структуры данных. Опять таки, находится на верхнем уровне ввиду того, что алгоритмы и полезные функции тут общие для всех симбиотов. Можем даже посмотреть на это наглядно
+
+<mark style="color:yellow;">**KLY\_WASM**</mark>
+
+Директория необходимая для работы KLY\_VM(KLYNTAR VIRTUAL MACHINE). Так же является хранилищем для .wasm смарт-контрактов
+
+<mark style="color:yellow;">**KLY\_Workflows**</mark>
+
+Содержит репозитории с workflow для симбиотов
+
+<mark style="color:yellow;">**MAINNET**</mark>
+
+Абсолютно аналогичная структура как и у ANTIVENOM
