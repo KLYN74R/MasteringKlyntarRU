@@ -69,6 +69,8 @@
   * [👐 Εκατόν(Hecaton)](beginning/relizy/ekaton-hecaton.md)
   * [😎 Continental](beginning/relizy/continental.md)
   * [🐲 Mutualism](beginning/relizy/mutualism.md)
+  * [🇮🇳 Lokapala](beginning/relizy/lokapala.md)
+  * [😈 Mephistopheles](beginning/relizy/mephistopheles.md)
   * [☄ SpookyAction](beginning/relizy/spookyaction.md)
   * [🔥 Prometheus](beginning/relizy/prometheus.md)
   * [🛰 Pandora](beginning/relizy/pandora.md)
