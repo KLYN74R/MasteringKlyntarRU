@@ -91,4 +91,6 @@ coverY: 0
 
 ### Другие ссылки
 
-<mark style="color:red;"></mark>[<mark style="color:red;">Оригинальная версия MasteringKlyntar на английском</mark>](https://mastering.klyntar.org/)<mark style="color:red;"></mark>
+<mark style="color:red;">**Оригинальная версия MasteringKlyntar на английском**</mark>
+
+{% embed url="https://mastering.klyntar.org/" %}
