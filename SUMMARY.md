@@ -76,7 +76,7 @@
   * [🛰 Pandora](beginning/relizy/pandora.md)
   * [🍄 MegaMycelium](beginning/relizy/megamycelium.md)
   * [🌪 Ragnarök](beginning/relizy/ragnaroek.md)
-  * [🌐 Web1337](beginning/relizy/web1337.md)
+  * [🌐 Web1337](beginning/relizy/web23.md)
 * [📈 CIIPs(предложения по улучшению индустрии)](beginning/ciips-predlozheniya-po-uluchsheniyu-industrii.md)
 * [🚀 Запуск и настройка инфраструктуры](beginning/zapusk-i-nastroika-infrastruktury.md)
 * [💱 Информация для бирж/обменников и тд](beginning/informaciya-dlya-birzh-obmennikov-i-td.md)
