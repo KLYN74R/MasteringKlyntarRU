@@ -79,7 +79,7 @@ KLYNTAR состоит из множества параллельных цепо
 
 &#x20;
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 Узнайте больше про плагины [_<mark style="color:red;">**здесь**</mark>_](../plaginy.md)_<mark style="color:red;">****</mark>_
 
