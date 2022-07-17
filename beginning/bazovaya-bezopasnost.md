@@ -22,11 +22,11 @@ coverY: 400
 Вы можете локально импортировать мой публичный GPG ключ(и ключи других членов команды) и проверять каждый новый pull через Apollo(команда _<mark style="color:purple;">checkrepo</mark>_ в CLI) или _<mark style="color:purple;">git verify-commit</mark>_.Так же ниже доступны необходимые ссылки для настройки окружения. Дополнительно мы так же имеем отдельный репозиторий с другими ключами(Ed25519,постквантовый Dilithium и тд.) которые вы тоже можете использовать для необходимых проверок.
 
 {% file src="../.gitbook/assets/VladChernenko.pubgpg" %}
-<mark style="color:red;">По ссылке</mark> [<mark style="color:purple;">https://github.com/KLYN74R/KlyntarTeamPubKeys</mark>](https://github.com/KLYN74R/KlyntarTeamPubKeys) <mark style="color:purple;"></mark> <mark style="color:red;">доступно</mark> <mark style="color:purple;"></mark> <mark style="color:red;">больше публичных ключей</mark>
+<mark style="color:red;">**По ссылке**</mark> [<mark style="color:purple;">**https://github.com/KLYN74R/KlyntarTeamPubKeys**</mark>](https://github.com/KLYN74R/KlyntarTeamPubKeys) <mark style="color:purple;">****</mark>** **<mark style="color:red;">**доступно**</mark>** **<mark style="color:purple;">****</mark>** **<mark style="color:red;">**больше публичных ключей**</mark>
 {% endfile %}
 
 {% hint style="info" %}
-По ссылке [https://www.gnupg.org/gph/en/manual/x56.html](https://www.gnupg.org/gph/en/manual/x56.html) можно узнать как импортировать ключи
+По ссылке [**https://www.gnupg.org/gph/en/manual/x56.html**](https://www.gnupg.org/gph/en/manual/x56.html) можно узнать как импортировать ключи
 {% endhint %}
 
 ### <mark style="color:red;">**Дополнительные возможности**</mark>
