@@ -5,3 +5,10 @@ coverY: 0
 
 # 🌀 Кольцевые подписи
 
+### Linkable Ring Signatures на KLYNTAR
+
+Lorem ipsum
+
+![](<../../.gitbook/assets/image (15).png>)
+
+![](<../../.gitbook/assets/image (12).png>)

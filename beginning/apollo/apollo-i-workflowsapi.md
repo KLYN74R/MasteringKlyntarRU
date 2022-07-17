@@ -4,7 +4,7 @@
 
 Для этого и существуют WorkflowsAPI. Они размещаются в&#x20;
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 
 

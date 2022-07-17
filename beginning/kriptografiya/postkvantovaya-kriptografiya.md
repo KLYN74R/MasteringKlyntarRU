@@ -95,7 +95,7 @@ _<mark style="color:purple;">**BLISS**</mark>_
 
 Вы уже можете сгенерировать BLISS пару ключей и адрес. Адресом является BLAKE3 хэш от публичного ключа
 
-![](<../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
 
 {% embed url="https://bliss.di.ens.fr/" %}
 
