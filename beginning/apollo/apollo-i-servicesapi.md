@@ -94,7 +94,7 @@ Apollo
 
 Наконец, перезагрузите Apollo и перейдите в раздел с сервисами.
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (1).png>)
 
 ![](<../../.gitbook/assets/image (1).png>)
 
