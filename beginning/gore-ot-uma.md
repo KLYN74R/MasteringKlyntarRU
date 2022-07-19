@@ -28,7 +28,9 @@ coverY: 139.54231433506044
 
 Однако, перед началом чтения серьезных доков дальше, всё таки внесу ясность.
 
-### <mark style="color:red;">KLYNTAR это...</mark>
+
+
+![](https://readme-typing-svg.herokuapp.com/?font=Major+Mono+Display\&size=44\&color=C20000\&vCenter=true\&width=450\&lines=Klyntar+is+...)
 
 * _<mark style="color:yellow;">**Проект, который полагается на безопасность всей крипто индустрии**</mark>_\
   \
