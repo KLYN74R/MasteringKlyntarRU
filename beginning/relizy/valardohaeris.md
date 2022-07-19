@@ -30,6 +30,6 @@ coverY: 0
 
 А в Cryptoland вскоре появится возможность подписывать данные
 
-![](<../../.gitbook/assets/image (16) (1).png>)
+![](<../../.gitbook/assets/image (16) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (13).png>)
+![](<../../.gitbook/assets/image (13) (1).png>)

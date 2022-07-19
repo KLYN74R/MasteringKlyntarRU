@@ -65,7 +65,7 @@ _<mark style="color:purple;">**Dilithium**</mark>_
 
 В зависимости от уровней безопасности NIST существует несколько реализаций. Вот их характеристики
 
-![](<../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
 
 Сами создатели рекомендуют использовать набор параметров Dilithium3, мы же используем Dilithium5 ввиду большей безопасности. Однако, для изменения уровня безопасности достаточно просто поменять одну строчку так что можно будет проводить такие изменения при необходимости. Вот сравнительная таблица по уровнях безопасности согласно NIST
 
@@ -107,7 +107,7 @@ _<mark style="color:purple;">**BLISS**</mark>_
 В таблице отсутствуют некоторые наши алгоритмы
 {% endhint %}
 
-![](<../../.gitbook/assets/image (17) (1) (1).png>)
+![](<../../.gitbook/assets/image (17) (1) (1) (1).png>)
 
 ### <mark style="color:red;">**Протоколы обмена ключами**</mark>
 
@@ -127,7 +127,7 @@ _<mark style="color:purple;">**BLISS**</mark>_
 
 А вот несколько сравнительных таблиц
 
-![https://blog.cloudflare.com/nist-post-quantum-surprise/](<../../.gitbook/assets/image (6).png>)
+![https://blog.cloudflare.com/nist-post-quantum-surprise/](<../../.gitbook/assets/image (6) (1).png>)
 
 ![](<../../.gitbook/assets/image (7) (1) (1) (1) (1).png>)
 
