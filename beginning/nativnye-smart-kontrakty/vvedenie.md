@@ -17,7 +17,7 @@ coverY: -300.46235921754595
 
 ![](<../../.gitbook/assets/image (5).png>)
 
-![](<../../.gitbook/assets/image (18).png>)
+![](<../../.gitbook/assets/image (18) (1).png>)
 
 {% embed url="https://github.com/appcypher/awesome-wasm-langs" %}
 
