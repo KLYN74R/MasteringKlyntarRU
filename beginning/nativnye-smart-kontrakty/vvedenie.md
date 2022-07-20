@@ -33,7 +33,7 @@ WebAssembly безопасный благодаря
 
 Ниже представлен список языков которые уже можно использовать для компиляции в WASM и безопасно выполнять их работу на симбиотах KLYNTAR
 
-![](<../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 {% embed url="https://github.com/appcypher/awesome-wasm-langs" %}
 
@@ -99,11 +99,13 @@ node test.js 11 33
 
 {% embed url="https://github.com/AssemblyScript/assemblyscript" %}
 
-Позднее, добавятся и другие. Вот несколько интересных тематический репозиториев
+Позднее, добавятся и другие. Вот несколько интересных тематических репозиториев
 
 ![](<../../.gitbook/assets/image (19).png>)
 
 ![](<../../.gitbook/assets/image (18).png>)
+
+![](<../../.gitbook/assets/image (18) (1).png>)
 
 ### <mark style="color:red;">**KLYNTAR VM и симбиоты**</mark>
 
