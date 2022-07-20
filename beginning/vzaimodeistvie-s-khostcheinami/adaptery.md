@@ -1,4 +1,5 @@
 ---
+description: Адаптируйте данные с разных источников для вашей KLYNTAR инфраструктуры
 cover: ../../.gitbook/assets/error-glitch-gif-3.gif
 coverY: 0
 ---
