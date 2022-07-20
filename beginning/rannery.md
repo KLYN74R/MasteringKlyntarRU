@@ -143,6 +143,119 @@ UWS_SERVER
 
 Как видно, сервер просто принимает некоторый JSON объект сервиса и передает на обработку раннеру, а сам просто отправляет простой HTTP ответ.
 
+### <mark style="color:red;">**Пример конфигурации раннера**</mark>
+
+Для того, чтоб ещё больше понять принцип работы, можно заглянуть в конфигурации
+
+```javascript
+{
+    "DOCKER_CONFIGS":{
+        
+        "protocol":"http",
+        "host":"localhost",
+        "port":2375
+    
+    },
+
+    "DESC_MAX_LEN":200,
+    "REDIRECTION_DEPTH":3,
+
+    "STATIC_NODES":[
+        "https://someklyntarpool.io",
+        "htts://api-klyntar.coinbase.com"
+    ],
+
+    "TRUSTED_HUBS":{
+        "WoD3FV8ByzerAUUCZ5rF58aTLpz5kTNxHnyBS5vzuqeq":{},
+        "7HHKSu9BNF7GuB3CX8BbUEzx9pp1SqLksigvfMZz9hopvWJJRSW4qrXTKWFq5ExSpm":{},
+        "63dMQGT8u5BvsAE7UniDSbBDmK6igBvcwSVHotaQ6938eMRYPbZSHwAYTgQcACQ2KK":{}       
+    },
+
+    "PREFER_TOOLCHAIN":{
+        
+        "docker":["rust","node.js","c","c++"],
+
+        "host":["rust","node.js","c","c++"]
+        
+    },
+
+    "KEYWORDS":["web3","defi","bridge","tor","control","storage","api"],
+
+    "NETCAP":{
+ 
+    },
+
+    "PREFER_SYMBIOTES":{
+    
+        "QfzhbWJsPa9NjqxepcXSbp1X58pkQNACS2ReyRo2SMCK":{
+            "MIN_FREEZE":0
+        },
+        "NrHwU6YMS5VZatxo9Z188ptR7dbNyYexRKCYickQBJG4":{},
+        "LvjcXxRbXbKnHSgaJrDWLx7vo8yR3BwpkBXApKukoaGX":{}
+    },
+    
+    "PREFER_HOSTCHAINS":{
+    
+        "btc":{
+            "MIN_FREEZE":0
+        },
+        "algo":{},
+        "sol":{}
+    },
+    
+    "DORMITORY":{
+        
+    },
+    
+    "ALLOWED_STORAGE":[
+        "github.com",
+        "gitlab.com",
+        "pkg.go.dev",
+        "crates.io",
+        "npmjs.com",
+        "rubygems.org",
+        "getcomposer.org",
+        "www.nuget.org",
+        "hackage.haskell.org",
+        "index.scala-lang.org"
+    ],
+
+
+    "REGISTRIES":{
+
+        "NODE.JS":[
+            
+            "https://localhost:4873"
+        
+        ],
+        "PYTHON":[
+
+
+        ],
+        "RUST":[
+
+
+        ],
+        "DOCKER":[
+            
+            "https://localhost:5000"
+            
+        ]
+
+    },
+
+    "CONTAINERS":[
+        "group1-WoD3FV8ByzerAUUCZ5rF58aTLpz5kTNxHnyBS5vzuqeq-node",
+        "group1-JeVZcdi8TQZaX6TKhtSKLCzMQMRCx5JjsQTiGbAaLPXW-rust.node.go.python"
+    ]
+    
+}
+```
+
+Тут раннер может определять из каких ресурсов разрешена загрузка файлов, определять контейнеры с которыми он будет работать, устанавливать доверенные центры-это могут быть мультисиг адреса которые к примеру пришлют вам подпись о безопасности сервиса и вы убедитесь что если за безопасность сервиса уже проголосовало определенное количество адресов с общим балансом более нескольких миллионов KLY и прочие опции.
+
+Всё это, ещё раз подчёркивает гибкие возможности KLYNTAR и возможности раннеров.
+
 ### <mark style="color:red;">**Дефолтные раннеры**</mark>
 
 По умолчанию вам будет доступен стандартный раннер от разработчиков KLYNTAR. Мы назвали его в честь нашей галактики-соседки Андромеды. Это символизм так как мы сравниваем обычные смарт-контракты с нашей, относительно хорошо известной галактикой Млечный путь. А вот сервисы в том виде, в котором они будут на KLYNTAR - это нечто новое, какая-то новая галактика - не столь далёкая, но всё же - открывает нам новые возможности
