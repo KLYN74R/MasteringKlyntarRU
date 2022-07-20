@@ -103,19 +103,54 @@ export default {
 
 Для такого простого коннектора наверняка надо что-то типа функций setCommit(для того, чтоб какой-то симбиот сохранил коммит) и checkCommit(для того, чтоб проверить факт включения).
 
-В таком случае структура вашего
+В таком случае ваш коннектор может иметь такой вид:
+
+```javascript
+//You can import anything you need
+import something from 'somewhere'
+import another from '../local/pack.js'
+
+
+//Some local functions
+
+let makeTransaction=(to,commitHash,blockID)=>{
+
+    //...Here further logic
+
+},
+
+
+//Exportable object
+export default {
+
+    method1:()=>{
+    
+        let params = CONFIGS.SYMBIOTES[CURRENT_SYMBIOTE_ID].HC_CONFIGS
+        
+        ///...you can use params.PUB(pubkey/address), params.PRV and other options
+    
+    },
+    
+    method2:()=>{},
+    
+    ...
+    
+    someAnotherMethod:()=>{}
+
+}
+```
 
 ### <mark style="color:red;">**Взаимная работа коннекторов и workflow**</mark>
 
 Поскольку нам нужен максимум, то как разработчики коннекторов так и workflow должны делать свои модули следуя практике максимально возможной гибкости. Это позволит использовать один и тот же коннектор совершенно разными симбиотами и их workflow.
 
-Использование коннекторов на уровне workflow
+### <mark style="color:red;">Использование коннекторов на уровне workflow</mark>
 
-В качестве примера можно опять таки привести самый простой workflow(dev\_controller). Вот как он использует коннектор в своем коде
+В качестве примера можно опять таки привести самый простой workflow(dev\_controller). Вот как он использует коннектор в своем коде.
 
 ![https://github.com/KLYN74R/KlyntarCore/blob/0cd166e7790e9ddeac9d3d3b8ce069689bdba13b/KLY\_Workflows/dev\_controller/life.js#L247](<../../.gitbook/assets/image (14).png>)
 
-Это функция генерации блоков. В рамках workflow запланировано так, что новый коммит не может быть добавлен если старый ещё не включён в хостчейн.
+Это функция генерации блоков. В рамках workflow запланировано так, что новый коммит не может быть добавлен если старый ещё не включён в хостчейн. Кроме того, на уровне коннектора определена логика периодического включения. Так к примеру, на Bitcoin и форках(ввиду общего API и похожих структур данных) вы можете установить параметр CONFIRMATIONS и таким образом коммиты будут только через установленные промежутки времени(ввиду того что на Bitcoin происходит коррекция сложности и сеть в любом случае добывает блок приблизительно раз в 10 минут). Но это лишь пример, другие коннекторы могут быть более функциональны и предоставлять другие класнные возможности.
 
 Точка входа в функцию [<mark style="color:red;">**https://github.com/KLYN74R/KlyntarCore/blob/0cd166e7790e9ddeac9d3d3b8ce069689bdba13b/KLY\_Workflows/dev\_controller/life.js#L137**</mark>](https://github.com/KLYN74R/KlyntarCore/blob/0cd166e7790e9ddeac9d3d3b8ce069689bdba13b/KLY\_Workflows/dev\_controller/life.js#L137)\
 \
