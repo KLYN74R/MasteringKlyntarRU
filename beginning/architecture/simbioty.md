@@ -101,7 +101,7 @@ _<mark style="color:red;">**dev\_symbiland**</mark>_ будет BFT блокче
 
 <mark style="color:yellow;">**Сервер**</mark>
 
-![](<../../.gitbook/assets/image (14) (1).png>)
+![](<../../.gitbook/assets/image (14) (1) (1).png>)
 
 {% embed url="https://github.com/uNetworking/uWebSockets.js" %}
 
