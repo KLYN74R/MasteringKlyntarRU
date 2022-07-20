@@ -360,7 +360,7 @@ _<mark style="color:red;">**Они НЕ публичные, а отправля�
 
 Проверка
 
-![](<../../.gitbook/assets/image (11) (1) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1) (1).png>)
 
 ### <mark style="color:red;">Важность для KLYNTAR в будущем</mark>
 
