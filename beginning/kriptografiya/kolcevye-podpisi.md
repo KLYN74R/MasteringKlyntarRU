@@ -36,7 +36,7 @@ P.S:Подобную операцию можно провести даже в Ap
 
 ![](<../../.gitbook/assets/image (17) (1).png>)
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 ![](<../../.gitbook/assets/image (12) (1).png>)
 

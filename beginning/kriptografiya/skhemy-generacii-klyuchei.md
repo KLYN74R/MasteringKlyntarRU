@@ -81,7 +81,7 @@ cat ed25519_pub | base64
 UPD: Начиная с версии _<mark style="color:red;">**v17.1.0**</mark>_ ValarDohaeris поддерживает HD адреса в KLYNTAR, а так же генерирует для вас 12 мнемо-слов. Тем не менее, функционал по генерации цепочек пар ключей и импорта фразы будет реализован в скором времени
 {% endhint %}
 
-![](<../../.gitbook/assets/image (18).png>)
+![](<../../.gitbook/assets/image (18) (1).png>)
 
 ### <mark style="color:red;">Ещё пару слов</mark>
 
