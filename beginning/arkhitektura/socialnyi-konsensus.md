@@ -26,7 +26,7 @@ coverY: 71.97907585004359
 
 Принимать голосования вы сможете прямо через Apollo в разделе _<mark style="color:purple;">**Разное**</mark>_(miscellaneous)
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 ### <mark style="color:red;">**Ресурсы хостчейнов в жизни KLYNTAR**</mark>
 
