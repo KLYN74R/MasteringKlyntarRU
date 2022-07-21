@@ -51,14 +51,18 @@ function getData(address actor) public view returns(string memory);
 На KLYNTAR в рамках WASM контракта будут определены такие функции:
 
 ```typescript
-export function (a: i32, b: i32 ): i32 {
+export function performLitecoinPolygonLogic(sender: string, data: string ): boolean;
 
-    makeRecursive(a);
-
-    return a + b;
-   
-}
+export function performPolygonLitecoinLogic(sender: string, data: string ): boolean;
 ```
+
+* _<mark style="color:purple;">**spendTokens**</mark>_\
+  \
+  Функция которая будет вызываться извне(то бишь направление <mark style="color:purple;">****</mark>** => **<mark style="color:purple;">**Polygon**</mark>) и которая на основании входящих данных позволяет пользователю что-то совершать с токенами\
+
+* _<mark style="color:purple;">**getDatа**</mark>_\
+  \
+  Возвращает какие-то данные про адрес, необходимые для смарт-контракта на KLYNTAR
 
 <mark style="color:orange;">**Litecoin**</mark>
 
