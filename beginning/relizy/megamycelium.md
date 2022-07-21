@@ -1,6 +1,6 @@
 ---
 description: Распространение KLYNTAR на все платформы
-cover: ../../.gitbook/assets/icegif-83 (1).gif
+cover: ../../.gitbook/assets/icegif-83.gif
 coverY: -77.00087183958152
 ---
 

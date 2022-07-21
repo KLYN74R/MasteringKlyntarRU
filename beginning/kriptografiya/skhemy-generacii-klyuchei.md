@@ -16,7 +16,7 @@ Ed25519 был представлен в OpenSSH версии 6.5. Это реа
 
 Кстати, KLYNTAR адреса совместимы с Solana(учитывая тот факт что их дефолтные адреса-это просто публичный ключ в Base58). Более того, транзакция коммита _<mark style="color:red;">**useful.txt**</mark>_ на мейнете Solana(с вызовом Memo программы) была произведена парой ключей KLYNTAR
 
-![Вы можете просмотреть транзакцию на официальном обозревателе Solana](<../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png>)
+![Вы можете просмотреть транзакцию на официальном обозревателе Solana](<../../.gitbook/assets/image (80).png>)
 
 {% embed url="https://explorer.solana.com/tx/36cs4bjKZJNcTsMA8N6Bz8mm2yBUX5WvcT74oT3Pn2sD6cMGprRQvmYVdPGQJmrnHPDrypJYkT9Zg6UHw4vuPssT" %}
 
@@ -29,7 +29,7 @@ Ed25519 был представлен в OpenSSH версии 6.5. Это реа
 }
 ```
 
-![](<../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (97).png>)
 
 <mark style="color:red;">**Node.js генерирует пару ключей в DER формате**</mark>
 
@@ -81,7 +81,7 @@ cat ed25519_pub | base64
 UPD: Начиная с версии _<mark style="color:red;">**v17.1.0**</mark>_ ValarDohaeris поддерживает HD адреса в KLYNTAR, а так же генерирует для вас 12 мнемо-слов. Тем не менее, функционал по генерации цепочек пар ключей и импорта фразы будет реализован в скором времени
 {% endhint %}
 
-![](<../../.gitbook/assets/image (18) (1) (1).png>)
+![](<../../.gitbook/assets/image (25).png>)
 
 ### <mark style="color:red;">Ещё пару слов</mark>
 

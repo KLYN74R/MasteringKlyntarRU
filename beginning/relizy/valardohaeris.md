@@ -26,10 +26,10 @@ coverY: 0
 
 <mark style="color:yellow;">**Генерация в Apollo**</mark>
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (39).png>)
 
 А в Cryptoland вскоре появится возможность подписывать данные
 
-![](<../../.gitbook/assets/image (16) (1) (1).png>)
+![](<../../.gitbook/assets/image (50).png>)
 
-![](<../../.gitbook/assets/image (13) (1).png>)
+![](<../../.gitbook/assets/image (14).png>)

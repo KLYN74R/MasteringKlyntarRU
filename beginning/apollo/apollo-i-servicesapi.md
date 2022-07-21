@@ -94,9 +94,9 @@ Apollo
 
 Наконец, перезагрузите Apollo и перейдите в раздел с сервисами.
 
-![](<../../.gitbook/assets/image (8) (1).png>)
+![](<../../.gitbook/assets/image (70).png>)
 
-![](<../../.gitbook/assets/image (1).png>)
+![](<../../.gitbook/assets/image (12).png>)
 
 Сбоку появятся кнопки которые и приведут вас к главной странице API вашего сервиса
 

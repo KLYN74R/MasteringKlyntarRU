@@ -5,7 +5,7 @@ coverY: -260.62833432128036
 
 # 💪 Расширенные возможности
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (52).png>)
 
 {% embed url="https://github.com/ewasm/design/blob/master/metering.md" %}
 

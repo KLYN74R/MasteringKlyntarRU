@@ -6,7 +6,7 @@ coverY: 260.31088082901556
 
 # 🔌 Плагины
 
-![](<../.gitbook/assets/image (11) (1) (1).png>)
+![](<../.gitbook/assets/image (44).png>)
 
 ### <mark style="color:red;">Что это?</mark>
 
