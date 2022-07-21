@@ -119,7 +119,7 @@ export function performPolygonLitecoinLogic(sender: string, data: string ): bool
 }
 ```
 
-Карта вызовов(call map) - это по сути своей JSON объект в свойствах которого определены имена функций смарт-контракта KLYNTAR. Значениями этих свойств являются массивы которые содержат объекты что описывают необходимый вызов функций ПЕРЕД этой. После того, как массив закончится вызывается данная функция с параметрами которые были получены в результате вызова последней под-функции в этой цепи.
+Карта вызовов(call map) - это по сути своей JSON объект в свойствах которого определены имена функций смарт-контракта KLYNTAR. Значениями этих свойств являются массивы которые содержат объекты что описывают необходимый вызов функций ПЕРЕД этой. После того, как массив закончится вызывается данная функция с параметрами которые были получены в результате вызова последней подфункции в этой цепи.
 
 В общем виде карта вызовов может выглядеть как-то так.
 
@@ -154,3 +154,130 @@ export function performPolygonLitecoinLogic(sender: string, data: string ): bool
 }
 ```
 
+Для функций, которые не будут требовать взаимодействия с другими сетями необязательно составлять и добавлять в карту вызовов.
+
+### <mark style="color:yellow;">**Возвращаемся к нашему приложению**</mark>
+
+Итак, после того, как вы составили карту, вы начинаете деплой в KLYNTAR. Нужно отправить
+
+* ABI для Polygon контракта
+* .wasm модуль контракта KLYNTAR
+* Карту вызовов
+
+Всё это сохранится под идентификатором BLAKE3 функции и вы сможете начать взаимодействовать с контрактом. Напомню, что наша карта имеет такой вид
+
+```json
+{
+    "performLitecoinPolygonLogic":[
+        {   "type":"Litecoin",
+            "func":"getTransaction",
+            "params":["txid","address"]
+        }
+    ],
+    
+    "performPolygonLitecoinLogic":[
+        {
+            "type":"EVM",
+            "func":"getData",
+            "params":["sender"],
+        }    
+    ]
+}
+```
+
+Предположим что в рамках логики было установлено так, что на Litecoin должна пройти какая-то транзакция и после этого можно запускать код на KLYNTAR. Условный отправитель формирует событие на KLYNTAR
+
+{% hint style="info" %}
+Ниже будет представлен псевдокод. Настоящий формат данных может отличатся от того, что представлено здесь
+{% endhint %}
+
+```json
+{
+    "version":"1.33.7"
+    "sender":"GVaWomidXy6TVXegvezhvL45psyod6X5TqMk7GVm13rE",
+    "event":"CONTRACT_CALL",
+    "payload":{
+        "id":"<SOME BLAKE3 HASH - ID OF CONTRACT>"
+        "func":"performLitecoinPolygonLogic",
+        "params":["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","LRAUdHk9qT4xA7fh49b3Y4DzddFWTLApaX"]
+    },
+    "fee":13.37,
+    "nonce":1337,
+    "signa":"pL0B3548WN/SRr1X8VSBd5wuAfcoBW4BfB1JKBaSV4polHfyBl/hojif3LQkU3CYkbKFHFiiT7UM+z1bQV0sDA=="
+}
+```
+
+Это отправляется в сеть KLYNTAR на соответствующий симбиот и происходит дальнейшее выполнение.
+
+Получив это, ноды(или первичный валидатор который будет выполнять это) берёт идентификатор контракта и достает карту вызовов из хранилища.
+
+Поскольку функция performLitecoinPolygonLogic присутствует там, то происходит следующее:
+
+Имея такой вот конвейер для данной функции
+
+```json
+ "performLitecoinPolygonLogic":[
+        {   "type":"Litecoin",
+            "func":"getTransaction",
+            "params":["txid","address"]
+        }
+    ],
+```
+
+Нода понимает что тут речь идёт про API Litecoin и на основе полученных параметров вызывает функцию _<mark style="color:orange;">**getTransaction**</mark>_ передавая туда массив полученный из вызова KLYNTAR контракта
+
+```
+["aaaaaaa...","LRAUdHk9qT4xA7fh49b3Y4DzddFWTLApaX"]
+```
+
+После этого, предположим что функция вернула нам транзакцию в hex виде
+
+```
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+```
+
+Затем смотрим на карту вызовов дальше
+
+```json
+ "performLitecoinPolygonLogic":[
+        {   "type":"Litecoin",
+            "func":"getTransaction",
+            "params":["txid","address"]
+        }
+    ]
+```
+
+Поскольку тут больше ничего нет, то теперь вызываем саму функцию _<mark style="color:red;">**performLitecoinPolygonLogic**</mark>_
+
+Напомним, что ее сигнатура имеет вид
+
+```typescript
+export function performLitecoinPolygonLogic(sender: string, data: string ): boolean;
+```
+
+Поскольку на прошлом шаге мы получили транзакцию в hex виде, то она и передается в эту функцию в качестве параметра. Происходит вызов
+
+```javascript
+performLitecoinPolygonLogic(
+    "GVaWomidXy6TVXegvezhvL45psyod6X5TqMk7GVm13rE",
+    "aaaaaa..."
+)
+```
+
+Вот собственно и всё.
+
+### <mark style="color:red;">**Что можно ещё дополнить**</mark>
+
+Возможности тут безграничные - можно будет строить разного рода адаптеры на данные, настраивать собственную комиссионную политику, включать много цепей в 1 вызов KLYNTAR контракта, узлы KLYNTAR смогут не только получать данные и проверять, но и при наличии, например баланса на Polygon проводить "платные" вызовы и так далее. Мы будем постоянно держать вас в курсе наших разработок и прогресса. Предлагайте свои идеи и помогайте решать проблемы :thumbsup:
+
+### <mark style="color:red;">**Перспективы**</mark>
+
+Благодаря симбиотической структуре и принципу шардинга по умолчанию, KLYNTAR позволяет вам выбирать нужные для вас симбиоты. Благодаря релизу Mutualism вы, при необходимости сможете платить нодам других симбиотов чтоб и они проверяли ваши контракты. Вы сможете вручную назначать только избранных валидаторов которым будет позволено выполнять ваши контракты, а благодаря тому, что KLYNTAR будет очень социальным(это можно понять по ссылкам даже на уровне конфигурации нод где вы можете поделиться своим сайтом, почтой или способом связаться с вами) вы сможете легко развязывать нужные вам задачи.
+
+Теперь ваши токены будут полагаться на безопасность KLYNTAR - а значит на безопасность всей индустрии, ваши пользователи получат доступ к передовой криптографии, будут использовать максимальные скорости всей индустрии благодаря SpookyAction, фантомным блокам, тотальной асинхронности и прочему.
+
+Следите за KLYNTAR и, если вам не трудно, помогите нам отправив донат на наши [_<mark style="color:purple;">**адреса**</mark>_](../socialnye-seti-and-ssylki.md)_<mark style="color:purple;">****</mark>_
