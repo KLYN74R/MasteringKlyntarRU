@@ -8,3 +8,6 @@ coverY: -260.62833432128036
 ![](../../.gitbook/assets/image.png)
 
 {% embed url="https://github.com/ewasm/design/blob/master/metering.md" %}
+
+\*сюда картинку с .wat файлом с инжектнутым измерением
+

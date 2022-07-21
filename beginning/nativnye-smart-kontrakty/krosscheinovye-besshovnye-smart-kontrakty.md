@@ -26,12 +26,23 @@ coverY: -341.13100177830466
 
 <mark style="color:orange;">**Polygon**</mark>
 
-На Polygon в рамках контракта будет определено 2 функции:
+На Polygon в рамках контракта будет определено 3 функции:
 
-* spendTokens(uint256 amount, address destination)\
+```solidity
+function spendTokens(uint256 amount, address destination,string memory extradata) public;
+
+function getData(address actor) public view returns(string memory);
+
+function operationSymbiote() public view returns(string memory);
+```
+
+* _<mark style="color:purple;">**spendTokens**</mark>_\
   \
-  Функция которая будет вызываться извне(то бишь направление KLYNTAR => Polygon)
-* getData(address source)
+  Функция которая будет вызываться извне(то бишь направление <mark style="color:purple;">**KLYNTAR**</mark>** => **<mark style="color:purple;">**Polygon**</mark>) и которая на основании входящих данных позволяет пользователю что-то совершать с токенами\
+
+* getDatа\
+  \
+  Возвращает какие
 
 
 
