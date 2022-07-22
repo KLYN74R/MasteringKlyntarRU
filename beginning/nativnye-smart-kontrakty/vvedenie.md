@@ -95,7 +95,7 @@ node test.js 11 33
 
 Мы как раз таки и начнём использовать AssemblyScript в качестве первой точки входа для .wasm смарт-контрактов на KLYNTAR.
 
-![](<../../.gitbook/assets/image (123).png>)
+![](<../../.gitbook/assets/image (123) (1).png>)
 
 {% embed url="https://github.com/AssemblyScript/assemblyscript" %}
 

@@ -18,7 +18,7 @@ Ed25519 был представлен в OpenSSH версии 6.5. Это реа
 
 ![Вы можете просмотреть транзакцию на официальном обозревателе Solana](<../../.gitbook/assets/image (80).png>)
 
-![](<../../.gitbook/assets/image (74).png>)
+![](<../../.gitbook/assets/image (74) (2).png>)
 
 {% embed url="https://explorer.solana.com/tx/36cs4bjKZJNcTsMA8N6Bz8mm2yBUX5WvcT74oT3Pn2sD6cMGprRQvmYVdPGQJmrnHPDrypJYkT9Zg6UHw4vuPssT" %}
 
