@@ -348,7 +348,7 @@ _<mark style="color:red;">**Они НЕ публичные, а отправля�
 
 Для этого выберите опцию _<mark style="color:purple;">**buildFullSignatu**</mark>_<mark style="color:purple;">**r**</mark>_<mark style="color:purple;">**e**</mark>_
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 Вставьте все 4 частичные подписи и идентификаторы
 
