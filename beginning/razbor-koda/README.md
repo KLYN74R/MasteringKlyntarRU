@@ -226,9 +226,9 @@ KLY_Hostchains
 
 ![](<../../.gitbook/assets/image (59).png>)
 
-<mark style="color:yellow;">**KLY\_WASM**</mark>
+<mark style="color:yellow;">**KLY\_KVM**</mark>
 
-Директория необходимая для работы KLY\_VM(KLYNTAR VIRTUAL MACHINE). Так же является хранилищем для .wasm смарт-контрактов
+Директория необходимая для работы KLYNTAR VM(KLYNTAR VIRTUAL MACHINE). Так же является хранилищем для .wasm смарт-контрактов
 
 <mark style="color:yellow;">**KLY\_Workflows**</mark>
 

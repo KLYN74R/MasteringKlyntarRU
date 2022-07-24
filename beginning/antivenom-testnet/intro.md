@@ -18,8 +18,8 @@ coverY: 142.28421970357454
 
 
 {% hint style="warning" %}
-Внимание\
-\
+**Внимание**
+
 Мы предполагаем что на вашей машине уже установлен Docker. Если нет, то вы можете установить его для Linux & Windows & Mac [_<mark style="color:red;">**здесь**</mark>_](https://docs.docker.com/engine/install/)
 {% endhint %}
 
@@ -34,9 +34,7 @@ Docker version 20.10.14, build a224086
 
 Мы представляем вам наш первый образ [_<mark style="color:red;">**klyntar/all\_in\_one**</mark>_](https://hub.docker.com/repository/docker/klyntar/all\_in\_one).
 
-\
-![](http://dockeri.co/image/klyntar/all\_in\_one)\
-
+![](http://dockeri.co/image/klyntar/all\_in\_one)
 
 Это универсальный образ с предустановленными Node.js, Go , Python и некоторыми другими инструментами типа `pnpm` , `node-gyp`, `git` и так далее. Это базовый слой для наших остальных Dockerfile(по крайней мере для ядра и Apollo). Приблизительный сжатый размер 606 мегабайт.
 
@@ -209,7 +207,6 @@ KlyntarCore
 Для запуска любого симбиота(в том числе и тестнета) вам нужны 2 директории - **CONFIGS** and **GENESIS**. Вы сможете найти их на нашем сайте или на ресурсах той компании или сообщества что запускает симбиот. Давайте создадим отдельную директорию для нашего тестнета AntiVenom с конфигурацией по умолчанию.
 
 ```shell
-
 # In ~/KlyntarCore
 
 # Создаем директорию для нашего симбиота(тестнет в данном случае)
