@@ -60,7 +60,7 @@ _<mark style="color:orange;">**Workflow**</mark>_ - это модель рабо
 
 Workflow будут находится в директории KLY\_Workflows. Каждая сабдиректория будет репозиторием для отслеживания версий. Вы можете это увидеть на GitHub
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (6).png>)
 
 Здесь вы видите 3 workflow - _<mark style="color:red;">**dev\_controller,dev\_tachyon**</mark>_ и _<mark style="color:red;">**dev\_helloworld**</mark>_(шаблон для написания собственного workflow)
 
