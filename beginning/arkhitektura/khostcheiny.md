@@ -1,5 +1,5 @@
 ---
-description: Черепахи и слоны на которых держаться симбиоты
+description: Черепахи и слоны на которых держатся симбиоты
 cover: ../../.gitbook/assets/DeterminedEssentialHoki-size_restricted.gif
 coverY: 0
 ---
