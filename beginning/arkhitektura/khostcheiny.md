@@ -1,5 +1,5 @@
 ---
-description: Черепахи и слоны на которых держаться симбиоты
+description: Черепахи и слоны на которых держатся симбиоты
 cover: ../../.gitbook/assets/DeterminedEssentialHoki-size_restricted.gif
 coverY: 0
 ---
@@ -70,7 +70,7 @@ _<mark style="color:purple;">**Хостчейн**</mark>_ - это цепочк�
 
 Не спешите выкидывать оборудование 🧙‍♂️
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (2).png>)
 
 ### <mark style="color:red;">Hivemind</mark>
 
