@@ -62,8 +62,6 @@ Docker version 20.10.14, build a224086
 
 #### **Загрузка образа**
 
-![](http://dockeri.co/image/klyntar/all\_in\_one)
-
 Представляем вам наш первый образ [_<mark style="color:red;">**klyntar/all\_in\_one**</mark>_](https://hub.docker.com/repository/docker/klyntar/all\_in\_one/general) _<mark style="color:red;">****</mark>_ из коллекции Docker образов KLYNTAR. Это универсальный образ с предустановленными <mark style="color:purple;">Node.js</mark>, <mark style="color:purple;">Go</mark>, <mark style="color:purple;">Python</mark> и некоторыми инструментами вроде <mark style="color:purple;">pnpm</mark>, <mark style="color:purple;">node-gyp</mark>, <mark style="color:purple;">git</mark> и так далее которые необходимы для сборки. Мы создали его, чтобы сэкономить ваше время и нервную систему. Это базовый уровень для всех наших Dockerfiles (по крайней мере, для ядра и Apollo). Приблизительный сжатый размер составляет 606 мегабайт, на на его основе работает ядро,Apollo и другие компоненты системы. Кроме того, в нашем репозитории[ _<mark style="color:red;">**KlyntarBaseImages**</mark>_](https://github.com/KLYN74R/KlyntarBaseImages) вы можете найти исходники всех файлов Docker базового уровня, так что вы можете cклонировать и собрать образ самостоятельно или найти скрипт сборки bash и установить требуемые компоненты прямо свою хост машину.
 
 {% hint style="info" %}
