@@ -75,7 +75,7 @@ cat ed25519_pub | base64
 
 Подпись стандартная и занимает 64 байт. На KLYNTAR мы используем ее в Base64.
 
-### <mark style="color:red;">А почему не через seed фразу</mark>
+### <mark style="color:red;">А почему не через мнемоническую фразу</mark>
 
 Тут как говориться coming soon. Мы также добавим позднее HD(hierarchical deterministic) возможности в кошелёк, а пока вот таким вот образом.
 
