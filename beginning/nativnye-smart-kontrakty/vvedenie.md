@@ -101,11 +101,11 @@ node test.js 11 33
 
 Позднее, добавятся и другие. Вот несколько интересных тематических репозиториев
 
-![](<../../.gitbook/assets/image (120).png>)
+![](<../../.gitbook/assets/image (120) (1).png>)
 
 ![](<../../.gitbook/assets/image (121).png>)
 
-![](<../../.gitbook/assets/image (122).png>)
+![](<../../.gitbook/assets/image (122) (1).png>)
 
 ### <mark style="color:red;">**KLYNTAR VM и симбиоты**</mark>
 
