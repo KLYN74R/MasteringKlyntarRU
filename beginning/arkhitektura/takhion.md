@@ -146,5 +146,14 @@ _<mark style="color:yellow;">**Какие-же преимущества полу
 
 В других блокчейнах вы привыкли видеть подобную цепочку блоков над заполнением которой работают все валидаторы / майнеры
 
-Однако, мы не пошли таким путём. Мы поняли, что максималь
+<figure><img src="../../.gitbook/assets/DefaultChain.drawio.png" alt=""><figcaption></figcaption></figure>
 
+Однако, мы не пошли таким путём. Мы поняли, что можно избавиться от лишних коммуникаций и синхронизаций если каждый валидатор будет работать над собственной "подцепочкой"(subchain) вместо того, чтобы все валидаторы работали над одной. При такой структуре, валидатор уже после запуска начинает генерировать блоки моментально без необходимости синхронизации с другими валидаторами.
+
+<figure><img src="../../.gitbook/assets/Tachyon_with_subchains.png" alt=""><figcaption></figcaption></figure>
+
+### <mark style="color:red;">Пару слов про гибкость конфигураций</mark>
+
+Подобно нашему прошлому рабочему процессу _<mark style="color:red;">**dev\_controller**</mark> _ на основе которого и создан __ <mark style="color:red;">**dev\_tachyon**</mark>_,_ здесь также присутствует большое дерево конфигураций
+
+{% embed url="https://github.com/KLYN74R/KlyntarCore/blob/main/KLY_Workflows/dev_tachyon/templates/configs.json" %}
