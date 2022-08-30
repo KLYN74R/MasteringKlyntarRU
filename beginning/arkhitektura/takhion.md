@@ -228,7 +228,7 @@ _<mark style="color:yellow;">**Какие-же преимущества полу
 
 Однако, это лишь первичная установка в генезисе. На деле же, в процессе развития симбиота будут добавляться и удалятся валидаторы, а так же надо учесть тот факт, что валидаторы могут быть оффлайн или же отключены для проведения обновлений или чего-то ещё.
 
-Мы вернёмся к этим вопросам после того, как узнаем как происходит финализация блока и почему в KLYNTAR она будет такой быстрой
+Мы вернёмся к этим вопросам после того, как узнаем как происходит финализация блока и почему в KLYNTAR она будет такой быстрой.
 
 ### <mark style="color:red;">Финализация</mark>
 
@@ -238,7 +238,101 @@ _<mark style="color:yellow;">**Какие-же преимущества полу
 Итак, в KLYNTAR блок будет обработан нодой только в случае получения подтверждения от 2/3 валидаторов
 {% endhint %}
 
+Валидатор генерирует пруф на блок(подписывает его ID и хэш) только после того, как получил его. Затем, этот пруф распространяется по сети вместе с пруфами от других валидаторов. Когда подходит время непосредственной проверки блока(когда узел выполняет транзакции из блока), то он проверяет свой кэш для пруфов и если оказывается что уже как минимум 2/3 валидаторов тоже готовы принять этот блок, то он агрегирует эти доказательства благодаря возможностям мультиподписи и формирует агрегированное доказательство и затем проверяет блок.
 
+Давайте попробуем пройтись шаг за шагом
+
+Представим что у нас в сети 3 валидатора. Каждый из них имеет свой BLS ключ и генерирует блоки в своем сабчейне
+
+```json
+"VALIDATORS":[
+        "7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta",
+        "7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT",
+        "7fJo5sUy3pQBaFrVGHyQA2Nqz2APpd7ZBzvoXSHWTid5CJcqskQuc428fkWqunDuDu"
+    ]
+```
+
+Предположим, что валидатор _<mark style="color:red;">**7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta**</mark>_ сгенерировал блок _<mark style="color:orange;">**1337**</mark>_ и готовится распространить его по сети. Сперва, он генерирует доказательство принятия для самого себя - он ведь один из валидаторов.
+
+Ранее его кэш для пруфов имел такой вид
+
+```json
+{
+    "7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT:X":{
+    
+        "V":{
+            
+            "7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta":"jfgz4ETT5y5tqy4qNpgANcWcjDJxQmOGxVrRc+nnVmGoKn7DaQy5uDF/KlHxR0PHAI7q5Twh2eXoGC1/0cVpD5ZH/FPupkJ0omJ81F0Ure9NAQrLu1GDHUHlo+VkFNTe",
+            "7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT":"teC7C0I745bpMxMhfqxCEeQWoxWqCtX7wT1JA/VHcsWjGRK/6uwS8nTXqPiyGE02E1dMGx24+p3Fs+t5Sa1AG29x2HwM8491q858HivzGNZubs5Bnbso06lfkkdoKhTR"
+            
+        }
+        ,...
+}
+```
+
+Сюда добавляются доказательства принятия от других валидаторов. После того как блок 1337 будет добавлен - кэш будет иметь такой вид
+
+```json
+{
+    "7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT:X":{
+    
+        "V":{
+            
+            "7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta":"jfgz4ETT5y5tqy4qNpgANcWcjDJxQmOGxVrRc+nnVmGoKn7DaQy5uDF/KlHxR0PHAI7q5Twh2eXoGC1/0cVpD5ZH/FPupkJ0omJ81F0Ure9NAQrLu1GDHUHlo+VkFNTe",
+            "7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT":"teC7C0I745bpMxMhfqxCEeQWoxWqCtX7wT1JA/VHcsWjGRK/6uwS8nTXqPiyGE02E1dMGx24+p3Fs+t5Sa1AG29x2HwM8491q858HivzGNZubs5Bnbso06lfkkdoKhTR"
+            
+        }
+        ,
+        
+    //    ...(other proofs)
+    
+    // Proofs for block 1337 by 7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta
+    "7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta:1337":{
+    
+        "V":{
+            
+            "7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta":"rJXZWtb4OB7l3s5jnahhILeJVFzgislkEssx0I2Eud9dsUFQJrfJMY2o7aBxK20lAWuMA79aPvPNV4VOtT1pBCzOHOEq119+9LjfmQNPk7RUodaYXdE1cqflA5Kb6cxp"
+        
+        }    
+
+}
+```
+
+Подпись генерируется следующим образом
+
+```javascript
+let signature = await SIG(blockID+":"+hash)
+
+// If block 1337 by validator
+// 7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta
+// has the hash 0123456789abcdef... then the signature will be like this one
+
+let signa = await SIG('7GPupbq1vtKUgaqVeHiDbEJcxS7sSjwPnbht4eRaDBAEJv8ZKHNCSu2Am3CuWnHjta:1337:0123456789abcdef...')
+```
+
+Аналогичную работу проводят и другие валидаторы и распространяют свои пруфы принятия блока по сети.
+
+_<mark style="color:yellow;">**Здесь мы и получаем свой ответ**</mark>_
+
+{% hint style="success" %}
+Блок считается финализированным если за него проголосовали _<mark style="color:red;">**2/3\*N**</mark>_ валидаторов
+{% endhint %}
+
+Таким образом, разного рода стороннее ПО, кошельки, биржи, обозреватели и так далее могут считать что блок принят, если за него проголосовало нужное количество валидаторов и вы получили криптографические доказательства этому.
+
+Даже если ваша нода проверяет только 1000ый блок другого сабчейна(допустим 7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT), то имея пруфы к этому блоку, уже можно считать его финализированным и тем, который 100% будет обработан когда ноды дойдут до него.
+
+### <mark style="color:red;">Ответы на несколько вопросов которые наверняка возникли к этому времени</mark>
+
+1. <mark style="color:yellow;">**Q**</mark>**: **<mark style="color:red;">****</mark> Так а что если в блоке будут неправильные транзакции - с ложным nonce, те которые тратят больше чем имеют и так далее\
+   \
+   <mark style="color:yellow;">**A**</mark>: В нашем случае нам важно только утвердить последовательность, а не валидность каждой из транзакции внутри. В любом случае, если все узлы начинают с генезис-состояния S которое одинаковое для всех, то пройдя через одинаковую последовательность блоков, у них у всех будет состояние S1.\
+
+2.
+
+### <mark style="color:red;">Какие ещё фишки в Tachyon</mark>
+
+Ранее мы уже рассказывали и намекали на использования мощности и скорости других цепочек таких как Solana или TON.
 
 ### <mark style="color:red;">Пару слов про гибкость конфигураций</mark>
 
