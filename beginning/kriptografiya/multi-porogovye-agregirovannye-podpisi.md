@@ -178,7 +178,7 @@ $$
 
 Теперь эти 3 стороны могут подписать какое-то сообщение. Пусть это будет <mark style="color:purple;">**SEND 5 KLY TO BOB**</mark>
 
-![](<../../.gitbook/assets/image (76).png>)
+![](<../../.gitbook/assets/image (76) (1).png>)
 
 У вас должны будут получится 3 подписи
 
