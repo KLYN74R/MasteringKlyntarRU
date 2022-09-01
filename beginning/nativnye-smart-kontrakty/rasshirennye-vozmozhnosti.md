@@ -34,26 +34,33 @@ const metering = require('wasm-metering')
 
 const wasm = fs.readFileSync('fac.wasm')
 const meteredWasm = metering.meterWASM(wasm, {
-  meterType: 'i32'
+  meterType: 'i32',
+  fieldStr:'energyUse'
 })
 
 const limit = 90000000
-let gasUsed = 0
+let energyUsed = 0
 
 const mod = WebAssembly.Module(meteredWasm.module)
+
 const instance = WebAssembly.Instance(mod, {
-  'metering': {
-    'usegas': (gas) => {
-      gasUsed += gas
-      if (gasUsed > limit) {
-        throw new Error('out of gas!')
-      }
+  
+    'metering': {
+
+        'energyUse': energy => {
+    
+            energyUsed += energy
+          
+            if (energyUsed > limit) throw new Error('No more energy for contract!')
+        
+        }
+          
     }
-  }
+
 })
 
 const result = instance.exports.fac(6)
-console.log(`result:${result}, gas used ${gasUsed * 1e-4}`) // result:720, gas used 0.4177
+console.log(`Result:${result}, energy used ${gasUsed * 1e-4}`) // Result:720, energy used 0.4177
 ```
 
 Здесь определяется глобальная переменная gasUsed и лимит газа. Как видно из этих строчек, модуль берёт голый байт-код и возвращает изменённый байт-код куда инжектит ссылку на функцию извне(в данном случае это функция _<mark style="color:purple;">**usegas**</mark>_ из импортируемого объекта _<mark style="color:red;">**metering**</mark>_).
