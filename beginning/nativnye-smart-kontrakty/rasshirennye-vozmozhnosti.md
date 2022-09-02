@@ -63,7 +63,7 @@ const result = instance.exports.fac(6)
 console.log(`Result:${result}, energy used ${gasUsed * 1e-4}`) // Result:720, energy used 0.4177
 ```
 
-Здесь определяется глобальная переменная gasUsed и лимит газа. Как видно из этих строчек, модуль берёт голый байт-код и возвращает изменённый байт-код куда инжектит ссылку на функцию извне(в данном случае это функция _<mark style="color:purple;">**usegas**</mark>_ из импортируемого объекта _<mark style="color:red;">**metering**</mark>_).
+Здесь определяется глобальная переменная _<mark style="color:purple;">**energyUsed**</mark>_ и лимит энергии. Как видно из этих строчек, модуль берёт голый байт-код и возвращает изменённый байт-код куда инжектит ссылку на функцию извне(в данном случае это функция _<mark style="color:purple;">**energyUsed**</mark>_ из импортируемого объекта _<mark style="color:red;">**metering**</mark>_).
 
 При превышении лимита - работа останавливается и мы ловим исключения. Хоть документация EWASM и описывает принцип работы, мы всё же не просто услышим, но и увидим как это работает.
 
@@ -138,21 +138,27 @@ import fs from 'fs'
 const wasm = fs.readFileSync('test.wasm')
 
 const meteredWasm = metering.meterWASM(wasm,{
-    meterType: 'i32'
+    meterType: 'i32',
+    fieldStr:'energyUse'
 })
 
 const energyLimit = 2000000
 let energyUsed = 0
 
 let wasmMetered = await loader.instantiate(meteredWasm,{
+    
     'metering': {
-      'usegas': (energy) => {
-        energyUsed += energy
-        if (energyUsed > energyLimit) {
-          throw new Error('No more energy!')
+
+        'energyUse': energy => {
+    
+            energyUsed += energy
+          
+            if (energyUsed > limit) throw new Error('No more energy for contract!')
+        
         }
-      }
+          
     }
+    
 });
 
 const result = wasmMetered.exports.testAdding(8,20);
@@ -176,7 +182,7 @@ wasm2wat metered.wasm
 (module
  (type $i32_=>_none (func (param i32)))
  (type $i32_i32_=>_i32 (func (param i32 i32) (result i32)))
- (import "metering" "usegas" (func $fimport$0 (param i32)))
+ (import "metering" "useEnergy" (func $fimport$0 (param i32)))
  (memory $0 0)
  (export "testAdding" (func $0))
  (export "memory" (memory $0))
@@ -227,7 +233,7 @@ wasm2wat metered.wasm
 Видим нашу функцию
 
 ```wasm
- (import "metering" "usegas" (func $fimport$0 (param i32)))
+ (import "metering" "useEnergy" (func $fimport$0 (param i32)))
 ```
 
 Таким образом везде в коде где будет встречаться вызов этой функции, мы будем понимать что идёт счёт газа(энергии). Так можно заметить, что функция вызывается при входе в главную функцию _<mark style="color:purple;">**testAdding**</mark>_, в начале цикла, при возврате из функции и так далее.
