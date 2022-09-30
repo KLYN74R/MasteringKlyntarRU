@@ -380,9 +380,7 @@ http(s)://<your_interface>:<port>/symbiotes
 Прикинув, мы можем предположить что в CLI это должно выглядеть как-то так:
 
 ```shell
-apollo uno-stats \
---addresses btc:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa,\
-polygon:0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027
+apollo uno-stats --addresses btc:1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa,polygon:0xe6E9a384AD6D138eBAA7006F0Be3BD46f873c027
 ```
 
 В ответ пусть приходят данные вида
