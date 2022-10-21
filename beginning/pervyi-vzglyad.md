@@ -80,7 +80,7 @@ coverY: 468.55958549222805
 
 Здесь вы узнаете о том, как правильно использовать репозиторий с лучшими практиками при построении собственной инфраструктуры, настройке плагинов, их комбинации и так далее
 
-### <mark style="color:red;"></mark>[<mark style="color:red;">Other projects</mark>](drugie-zamechatelnye-proekty-skoro.md)<mark style="color:red;"></mark>
+### <mark style="color:red;"></mark>[<mark style="color:red;">Other projects</mark>](ekosistema-klyntar-skoro.md)<mark style="color:red;"></mark>
 
 Узнайте больше о других будущих проектах и проектах которые уже в разработке
 
