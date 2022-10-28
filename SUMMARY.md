@@ -93,3 +93,10 @@
 * [🍕 Контрибуторам](beginning/kontributoram.md)
 * [👮 Базовая безопасность](beginning/bazovaya-bezopasnost.md)
 * [🇸🇴 Социальные сети & Ссылки](beginning/socialnye-seti-and-ssylki.md)
+
+***
+
+* [MasteringKlyntar(ENG)](https://mastering.klyntar.org/)
+* [KLYNTAR Services](https://services.docs.klyntar.org/)
+* [KLYNTAR Smart Contracts](https://smart-contracts.docs.klyntar.org/)
+* [KLYNTAR UsefulTips](https://useful-tips.docs.klyntar.org/)
