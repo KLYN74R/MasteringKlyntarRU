@@ -36,6 +36,7 @@
   * [💪 Расширенные возможности](beginning/smart-kontrakty-i-virtualnye-mashiny/rasshirennye-vozmozhnosti.md)
   * [🔮 KLYNTAR EVM](beginning/smart-kontrakty-i-virtualnye-mashiny/klyntar-evm.md)
   * [⚛ Совместимость с экосистемой Cosmos](beginning/smart-kontrakty-i-virtualnye-mashiny/sovmestimost-s-ekosistemoi-cosmos.md)
+  * [💠 Экосистема Polkadot](beginning/smart-kontrakty-i-virtualnye-mashiny/ekosistema-polkadot.md)
   * [😱 Кастомные виртуальные машины](beginning/smart-kontrakty-i-virtualnye-mashiny/kastomnye-virtualnye-mashiny.md)
 * [🤖 Сервисы](beginning/servisy/README.md)
   * [🤩 Интро](beginning/servisy/intro.md)
