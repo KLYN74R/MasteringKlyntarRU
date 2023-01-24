@@ -105,6 +105,16 @@ coverY: 0
 
 {% embed url="https://t.me/KLYN74R" %}
 
+{% embed url="https://discord.gg/f7e7fCp97r" %}
+
+{% embed url="https://www.youtube.com/@klyntar" %}
+
+{% embed url="https://www.facebook.com/KLYN74R/" %}
+
+{% embed url="https://gitlab.com/KLYNTAR" %}
+
+{% embed url="https://klyn74r.tumblr.com/" %}
+
 ### <mark style="color:red;">Другие ссылки</mark>
 
 **Оригинальная версия MasteringKlyntar на английском**
