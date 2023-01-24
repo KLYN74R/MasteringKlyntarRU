@@ -1,6 +1,6 @@
 ---
 cover: ../../.gitbook/assets/Article_BannerStreetArtist.webp
-coverY: 256.51295336787564
+coverY: 157.51295336787564
 ---
 
 # 😵 Гомоморфные схемы
