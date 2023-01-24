@@ -184,7 +184,7 @@ _<mark style="color:yellow;">**Какие-же преимущества полу
 
 Это даже можно увидеть в логах узла валидатора
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Здесь видно как узел пытается найти блок <em><mark style="color:yellow;"><strong>7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT:</strong></mark><mark style="color:orange;"><strong>1721</strong></mark></em></p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (5).png" alt=""><figcaption><p>Здесь видно как узел пытается найти блок <em><mark style="color:yellow;"><strong>7Wnx41FLF6Pp2vEeigTtrU5194LTyQ9uVq4xe48XZScxpaRjkjSi8oPbQcUVC2LYUT:</strong></mark><mark style="color:orange;"><strong>1721</strong></mark></em></p></figcaption></figure>
 
 ### <mark style="color:red;">Валидация и формирование последовательности проверки</mark>
 
